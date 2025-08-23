@@ -7,8 +7,85 @@
 
 	<link rel="stylesheet" href="sailbird.css">
 	<script src="sailbird.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-	<h1>Coming soon...</h1>
+	
+<!-- Header -->
+<header>
+    <nav class="navbar">
+        <div class="logo">YourLogo</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Your Website</h1>
+        <p>Build amazing static websites easily.</p>
+        <a href="#contact" class="btn">Get in Touch</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Write about your company, mission, and vision here. You can modify this text.</p>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services">
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="card">
+                <h3>Service One</h3>
+                <p>Description of service one. You can replace this text.</p>
+            </div>
+            <div class="card">
+                <h3>Service Two</h3>
+                <p>Description of service two. You can replace this text.</p>
+            </div>
+            <div class="card">
+                <h3>Service Three</h3>
+                <p>Description of service three. You can replace this text.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <p id="form-msg"></p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 froidindia. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
