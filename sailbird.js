@@ -33,6 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+
+
+
     // Animate on scroll
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -52,12 +55,32 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
+
+	// entries.forEach(entry => {
+        //     if (entry.isIntersecting) {
+        //         entry.target.classList.add('visible');
+        //         if (entry.target.id === 'features' || entry.target.id === 'products') {
+        //             // Stagger cards
+        //             const cards = entry.target.querySelectorAll('.feature-card, .product-card');
+        //             cards.forEach((card, index) => {
+        //                 setTimeout(() => {
+        //                     card.classList.add('visible');
+        //                 }, index * 200);
+        //             });
+        //         }
+        //         if (entry.target.id === 'signup') {
+        //             entry.target.classList.add('visible');
+        //         }
+        //     }
+        // });
+
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
     observer.observe(document.querySelector('.about-content'));
     observer.observe(document.querySelector('#features'));
     observer.observe(document.querySelector('#signup'));
+//     observer.observe(document.querySelector('#products'));
 
     // Hero text animation
     const animatedText = document.querySelector('.animated-text');
