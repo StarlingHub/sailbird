@@ -140,4 +140,71 @@ document.addEventListener('DOMContentLoaded', () => {
             parallaxBg.style.transform = `translateY(${scrollPosition * 0.5}px)`;
         });
     }
+
+
+
+
+
+    setTimeout(() => {
+	    const text = "Stay Cool & Safe. Activate Anytime, Anywhere. No Ice Packs.";
+	    const words = text.split(".");
+	    const container = document.getElementById("textContainer");
+	    const cursor = document.getElementById("cursor");
+
+	    let totalWidth = 0;
+
+	    words.forEach((word, index) => {
+
+	    if(index === words.length - 1) return
+	    const span = document.createElement("span");
+	    span.className = "word";
+	    span.textContent = word + ".";
+	    span.style.animationDelay = `${index * 0.5}s`;
+	    container.appendChild(span);
+
+	    // Calculate width for cursor positioning
+	    const tempSpan = document.createElement("span");
+	    tempSpan.style.visibility = "hidden";
+	    tempSpan.style.display = "inline-block";
+	    tempSpan.style.fontSize = "2.5em";
+	    tempSpan.textContent = word;
+	    container.appendChild(tempSpan);
+	    totalWidth += tempSpan.offsetWidth + 20; // Add margin
+	    tempSpan.remove();
+
+	    // Show cursor before each word
+	    setTimeout(() => {
+		    cursor.style.display = "block";
+		    cursor.style.left = `${totalWidth - 10}px`; // Adjust cursor position
+	    }, index * 500);
+
+	    // Hide cursor after last word
+	    if (index === words.length - 1) {
+		    setTimeout(() => {
+		    cursor.style.display = "none";
+		    }, (index + 1) * 500);
+	    }
+	    });
+    }, 1000);
+
+
+const carousels = document.querySelectorAll("[data-carousel]");
+
+carousels.forEach(carousel => {
+    const images = carousel.querySelectorAll("img");
+    let currentIndex = 0;
+
+    function showNextImage() {
+	images[currentIndex].classList.remove("active");
+	images[currentIndex].classList.add("prev");
+
+	currentIndex = (currentIndex + 1) % images.length;
+
+	images[currentIndex].classList.remove("prev");
+	images[currentIndex].classList.add("active");
+    }
+
+    // Auto-slide every 3 seconds for each carousel
+    setInterval(showNextImage, 3000);
+});
 });
