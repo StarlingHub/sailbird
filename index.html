@@ -1,17 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>FROiD - Cooling Products</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FROiD - Cooling Products</title>
+    <link rel="stylesheet" href="sailbird.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"> -->
 
-	<link rel="stylesheet" href="./sailbird.css">
-	<script src="./sailbird.js"></script>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-	    <h1 style="text-align: center;">Our Website is Coming Soon!</h1>
-        <p style="text-align: center;">Stay tuned!</p>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./assets/FROiD-Cooling Products Logo.jpg" alt="FROiD-Cooling Products Logo" height="50px">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Products</a></li>
+            <li><a href="#about">Applications</a></li>
+            <li><a href="#signup">Use Cases</a></li>
+            <li><a href="#signup">About Us</a></li>
+            <li><a href="#signup">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Parallax and Text Animation -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1 style="font-weight: 900; font-size: 5em; margin-bottom: -10px;" class="animated-text">FROiD</h1>
+            <h2 style="font-weight: 500; font-size: 2em; margin-top: 0px; padding-bottom: 30px;" class="animated-text2">Cooling Products</h2>
+
+            <div class="p">
+                <p style="margin-bottom: 30px; font-weight: 500;">Safe Storage. Anytime. Anywhere. Reliable.</p>
+                <p style="margin-top: 15px; font-weight: 300;">Tested & Approved by India's National Test House (NTH) Center</p>
+                <p style="margin-top: 15px; font-weight: 300;">Portable. Non-Electric. Patent-Protected. Storage wallet for Medication.</p>
+            </div>
+            <a href="#signup" class="cta-button">Buy Now</a>
+        </div>
+    </section>
+
+
+    <!-- Key Features Section with Staggered Scroll Animations -->
+    <section id="features" class="features animate-on-scroll">
+        <h2>What Makes FROiD Unique</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>✅ NTH Tested & Approved</h3>
+
+                <div style="text-align: left; padding: 10px;">
+                    <div style="display: flex; padding: 5px 0;">
+                        <p style="padding-right: 5px;">✔︎</p>
+                        <p>Your safety comes first.</p>
+                    </div>
+                    <div style="display: flex; padding: 5px 0;">
+                        <p style="padding-right: 5px;">✔︎</p>
+                        <p>Certified by India’s National Test House (NTH), ensuring every pouch meets the highest quality standards.</p>
+                    </div>
+                    <div style="display: flex; padding: 5px 0;">
+                        <p style="padding-right: 5px;">✔︎</p>
+                        <p>Independent lab testing guarantees performance, durability, and reliability.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-card">
+                <h3>✅ Patent-Protected Innovation</h3>
+
+                <div style="text-align: left; padding: 10px;">
+                    <div style="display: flex; padding: 5px 0;">
+                        <p style="padding-right: 5px;">✔︎</p>
+                        <p>Original. Authentic. Trusted.</p>
+                    </div>
+                    <div style="display: flex; padding: 5px 0;">
+                        <p style="padding-right: 5px;">✔︎</p>
+                        <p>Backed by a granted patent, FROiD is not just another cooling pouch.</p>
+                    </div>
+                    <div style="display: flex; padding: 5px 0;">
+                        <p style="padding-right: 5px;">✔︎</p>
+                        <p>The design and technology are exclusive, making it a globally recognized innovation in medication and cosmetic storage.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-card">
+                <h3>✅ No Ice. No Electricity</h3>
+
+                <div style="text-align: left; padding: 10px;">
+                    <div style="display: flex; padding: 5px 0;">
+                        <p style="padding-right: 5px;">✔︎</p>
+                        <p>Cooling freedom, anytime. Anywhere.</p>
+                    </div>
+                    <div style="display: flex; padding: 5px 0;">
+                        <p style="padding-right: 5px;">✔︎</p>
+                        <p>Works without refrigeration, batteries, or ice packs.</p>
+                    </div>
+                    <div style="display: flex; padding: 5px 0;">
+                        <p style="padding-right: 5px;">✔︎</p>
+                        <p>Perfect for travel, outdoor use, and regions with unreliable electricity.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-card">
+                <h3>✅ Temperature Stability</h3>
+
+                <div style="text-align: left; padding: 10px;">
+                    <div style="display: flex; padding: 5px 0;">
+                        <p style="padding-right: 5px;">✔︎</p>
+                        <p>Consistent. Reliable. Safe.</p>
+                    </div>
+                    <div style="display: flex; padding: 5px 0;">
+                        <p style="padding-right: 5px;">✔︎</p>
+                        <p>Maintains 18–30°C for up to 56 hours, even in challenging climates.</p>
+                    </div>
+                    <div style="display: flex; padding: 5px 0;">
+                        <p style="padding-right: 5px;">✔︎</p>
+                        <p>Keeps your essentials in the safe zone, preventing spoilage or damage.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-card">
+                <h3>✅ Portable & Reusable</h3>
+
+                <div style="text-align: left; padding: 10px;">
+                    <div style="display: flex; padding: 5px 0;">
+                        <p style="padding-right: 5px;">✔︎</p>
+                        <p>Smart design for everyday convenience.</p>
+                    </div>
+                    <div style="display: flex; padding: 5px 0;">
+                        <p style="padding-right: 5px;">✔︎</p>
+                        <p>Lightweight and travel-friendly — fits in your bag, purse, or luggage.</p>
+                    </div>
+                    <div style="display: flex; padding: 5px 0;">
+                        <p style="padding-right: 5px;">✔︎</p>
+                        <p>Built to last: reusable for 2+ years, reducing waste and costs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-card">
+                <h3>✅ Global Trust & Adoption</h3>
+
+                <div style="text-align: left; padding: 10px;">
+                    <div style="display: flex; padding: 5px 0;">
+                        <p style="padding-right: 5px;">✔︎</p>
+                        <p>Trusted by people. Backed by organizations.</p>
+                    </div>
+                    <div style="display: flex; padding: 5px 0;">
+                        <p><strong>Used worldwide by:</strong></p>
+                    </div>
+                    <div style="display: flex; padding: 5px 0;">
+                        <p style="padding-right: 5px;">✔︎</p>
+                        <p>Patients & caregivers needing reliable insulin storage</p>
+                    </div>
+                    <div style="display: flex; padding: 5px 0;">
+                        <p style="padding-right: 5px;">✔︎</p>
+                        <p>Healthcare providers & NGOs in rural and hot-climate missions</p>
+                    </div>
+                    <div style="display: flex; padding: 5px 0;">
+                        <p style="padding-right: 5px;">✔︎</p>
+                        <p>Travelers & professionals who value safe storage for essentials</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section with Staggered Scroll Animations -->
+    <section id="features" class="features animate-on-scroll">
+        <h2>Real-World Applications</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Medications Storage Wallet</h3>
+                <p>For insulin pens, vials and other temperature-sensitive treatments.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Travel Storage Solution</h3>
+                <p>Ideal for patients, healthcare professionals, and frequent travelers in hot climates.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Emergency & Remote Use</h3>
+                <p>Reliable for NGOs, healthcare missions, and rural areas with limited refrigeration access.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- who with Staggered Scroll Animations -->
+    <section id="features" class="features animate-on-scroll">
+        <h2>Who uses Our Products</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Patients & Frequent Travelers</h3>
+                <p>For daily use or safe travel with essential medications. Peace of mind when moving across hot regions and unpredictable climates.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Healthcare Providers</h3>
+                <p>Ensures medication safety for clinics, hospitals, and outreach programs.</p>
+            </div>
+            <div class="feature-card">
+                <h3>NGOs & Relief Organizations</h3>
+                <p>Reliable in rural, remote, and emergency settings where refrigeration isn't available.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with Parallax Image -->
+    <section id="about" class="about">
+        <div class="parallax-bg"></div>
+        <div class="about-content animate-on-scroll">
+            <h2>About Us</h2>
+
+            <div class="common-tb-padding">
+                <p style="line-height: 1.5;">At <strong>FROiD Cooling Products</strong>, we design <strong>innovation storage solutions</strong> for individuals, healthcare providers, and organizations who need to keep <strong>medications and cosmetics safe during travel or in hot climates.</strong></p>
+            </div>
+            <div class="common-tb-padding">
+                <p style="line-height: 1.5;">Our flagship product - the <strong>FROiD Storage Wallet</strong> - is <strong>patent-protected</strong> and engineered to provide a <strong>portable, reusable, and chemical-free storage option</strong> that works anywhere in the world.</p>
+            </div>
+
+            <div class="common-tb-padding">
+                <p style="line-height: 1.5;">At <strong>FROiD Cooling Products</strong>, our mission is to become a world leader in portable storage solutions for life-saving medications. We are expanding across India and abroad, partnering with healthcare providers, NGOs, and multinational brands worldwide.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Signup Section -->
+    <section id="signup" class="signup animate-on-scroll">
+        <h2>Contact Us</h2>
+
+        <div>
+            <h3 style="padding-bottom: 10px;font-size: 1.75rem;">Have questions? | Want to collaborate?</h3>
+            <p>We're here to help! Whether you're a customer, distributor, healthcare provider, or potential partner, reach out to us and we'll respond promptly.</p>
+        </div>
+        <div>
+            <h3 style="padding-bottom: 10px;font-size: 1.75rem;">Get in Touch</h3>
+
+            <div style="width: 80% !important; margin: 0 auto; display: flex; justify-content: center;">
+                <div style="text-align: center; padding: 10px;">
+                    <h4 style="padding-bottom: 7px;font-size: 1.25rem;">Phone</h4>
+                    <p>+91 9313829678</p>
+                </div>
+                <div style="text-align: center; padding: 10px;">
+                    <h4 style="padding-bottom: 7px;font-size: 1.25rem;">Email</h4>
+                    <p>froidindia@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="app-links">
+            <a href="#" class="app-button">Whatsapp</a>
+            <a href="#" class="app-button">Instagram</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 FROiD - Colling Products. All rights reserved.</p>
+    </footer>
+
+    <script src="sailbird.js"></script>
 </body>
 </html>
