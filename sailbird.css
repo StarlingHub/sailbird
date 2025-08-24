@@ -498,7 +498,7 @@ footer p {
     overflow: hidden;
     transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease, opacity 0.5s ease;
     transform: translateY(50px);
-    width: 25% !important;
+    width: 25%;
     margin: 10px;
 }
 
@@ -601,4 +601,47 @@ footer p {
     transform: scale(1.1);
     box-shadow: 0 5px 15px rgba(0, 85, 255, 0.4);
     background: linear-gradient(90deg, #ff00aa, #0055ff);
+}
+
+
+
+@media screen and (min-width: 1400px) {
+  /* CSS rules for screens wider than 768px */
+  .product-card {
+    width: 25%;
+  }
+
+  .product-grid{
+    width: 100% !important;
+  }
+
+}
+
+
+
+@media screen and (max-width: 1400px) {
+  /* CSS rules for screens wider than 768px */
+  .product-card {
+    width: 40%;
+  }
+
+  .product-grid{
+    width: 100% !important;
+  }
+
+}
+
+
+
+
+@media screen and (max-width: 745px) {
+  /* CSS rules for screens wider than 768px */
+  .product-card {
+    width: 90%;
+  }
+
+  .product-grid{
+    width: 100% !important;
+  }
+
 }
