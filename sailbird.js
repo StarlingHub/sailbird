@@ -242,4 +242,27 @@ carousels.forEach(carousel => {
 
     document.querySelectorAll('.card, .whatsapp-btn').forEach(el => observer3.observe(el));
 
+
+
+
+const backToTopBtn = document.getElementById("backToTop");
+
+// Show button when user scrolls down 100px
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+}
+
+// Scroll to top smoothly when clicked
+backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
 });
