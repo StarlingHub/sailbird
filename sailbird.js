@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.querySelector(this.getAttribute('href').replace("#", "."));
+	    console.log(target)
             if (target) {
                 window.scrollTo({
                     top: target.offsetTop - 80,
@@ -207,4 +208,38 @@ carousels.forEach(carousel => {
     // Auto-slide every 3 seconds for each carousel
     setInterval(showNextImage, 3000);
 });
+
+
+// Reveal animation on scroll with staggered delay
+    const cards = document.querySelectorAll('.feature-card');
+
+    const observer1 = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('show');
+          }, index * 200); // stagger delay
+          observer1.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => {
+      observer1.observe(card);
+    });
+
+
+
+
+    // Intersection Observer for reveal animations
+    const observer3 = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.card, .whatsapp-btn').forEach(el => observer3.observe(el));
+
 });
