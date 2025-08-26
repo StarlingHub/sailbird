@@ -891,13 +891,13 @@ footer p {
      .contact-cards .card h3 {
       font-size: 1.4rem;
       margin-bottom: 10px;
-      color: white;
+      color: black;
     }
 
      .contact-cards .card p {
       font-size: 1rem;
       margin-bottom: 0;
-      color: white;
+      color: black;
     }
 
 
@@ -959,6 +959,124 @@ footer p {
 }
 
 #backToTop:hover {
-    background-color: #56ab2f;
+    background-color: black;
     transform: scale(1.1);
 }
+
+
+.h2{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    color: #333;
+}
+
+.carousel-slider {
+      
+      position: relative;
+      width: 95%;
+      margin: 50px auto;
+      max-width: 1200px;
+      aspect-ratio: 16 / 9; /* keeps it proportional on all screens */
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      background: #000;
+    }
+
+    .slides {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transform: scale(1.05);
+      transition: opacity 0.8s ease, transform 1s ease;
+      pointer-events: none;
+    }
+
+    .slide.active {
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: auto;
+      z-index: 1;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slide.active img {
+      animation: kb 6s ease-in-out forwards;
+    }
+    @keyframes kb {
+      0% { transform: scale(1.02); }
+      100% { transform: scale(1.08); }
+    }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      transition: 0.3s;
+      z-index: 2;
+    }
+    .nav-btn:hover { background: rgba(0,0,0,0.8); }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    .dots {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+    }
+    .dot {
+      height: 10px;
+      width: 10px;
+      margin: 0 4px;
+      background-color: rgba(255,255,255,0.6);
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .dot:hover { transform: scale(1.15); }
+    .dot.active { background-color: white; }
+
+    @media (max-width: 768px) {
+      .carousel { aspect-ratio: 4 / 3; border-radius: 12px; }
+      .nav-btn { font-size: 18px; padding: 8px; }
+      .dot { height: 8px; width: 8px; }
+    }
+
+    @media (max-width: 480px) {
+      .carousel { aspect-ratio: 1 / 1; border-radius: 8px; }
+      .nav-btn { font-size: 16px; padding: 6px; }
+      .dot { height: 6px; width: 6px; margin: 0 3px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .slide, .slide.active { transition: none; }
+      .slide.active img { animation: none; }
+    }
