@@ -464,7 +464,10 @@ footer p {
         font-size: 16px;
     }
 
-    .features h2, .about h2, .signup h2 {
+    .features h2, .about h2, .signup h2, .features-section h2 {
+        font-size: 32px;
+    }
+    .h2{
         font-size: 32px;
     }
 
@@ -726,10 +729,13 @@ footer p {
     }
 
     .features-section h2 {
-      font-size: 2.7rem;
+      /* font-size: 2.7rem;
       margin-bottom: 20px;
       color: #111827;
-      animation: fadeInDown 1s ease forwards;
+      animation: fadeInDown 1s ease forwards; */
+      font-size: 48px;
+        margin-bottom: 20px;
+        color: #333;
     }
 
     .features-grid {
@@ -823,9 +829,13 @@ footer p {
     }
 
     @media (max-width: 600px) {
-      .features-section h2 {
+      /* .features-section h2 {
         font-size: 2.2rem;
-      }
+      } */
+
+        .h2{
+            font-size: 2.2rem;
+        }
     }
 
     /* Animations */
@@ -965,12 +975,13 @@ footer p {
 
 
 .h2{
-    margin: 30px 0;
+    margin: 20px 0;
     text-align: center;
-    font-size: 48px;
-    font-weight: 600;
+    font-size: 2.7rem;
+      margin-bottom: 20px;
+      color: #111827;
+      animation: fadeInDown 1s ease forwards;
     margin-bottom: 60px;
-    color: #333;
 }
 
 .carousel-slider {
@@ -978,6 +989,7 @@ footer p {
       position: relative;
       width: 95%;
       margin: 50px auto;
+      margin-top: 25px;
       max-width: 1200px;
       aspect-ratio: 16 / 9; /* keeps it proportional on all screens */
       overflow: hidden;
