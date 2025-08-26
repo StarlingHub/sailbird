@@ -312,4 +312,38 @@ const slides = document.querySelectorAll('.slide');
     });
 
     startAutoSlide();
+
+
+
+
+
+    // Enable swipe only for mobile
+if (window.innerWidth <= 500) {
+  let startX = 0;
+  let endX = 0;
+
+  const carousel = document.querySelector(".carousel-slider");
+
+  carousel.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  carousel.addEventListener("touchend", (e) => {
+    endX = e.changedTouches[0].clientX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const swipeDistance = endX - startX;
+    if (Math.abs(swipeDistance) > 50) { // threshold
+      if (swipeDistance > 0) {
+        // Swipe Right → previous slide
+        prevSlide();
+      } else {
+        // Swipe Left → next slide
+        nextSlide();
+      }
+    }
+  }
+}
 });

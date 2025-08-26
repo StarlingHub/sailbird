@@ -1092,3 +1092,12 @@ footer p {
       .slide, .slide.active { transition: none; }
       .slide.active img { animation: none; }
     }
+
+
+
+    /* Hide carousel arrows only on mobile */
+@media (max-width: 500px) {
+  .nav-btn {
+    display: none !important;
+  }
+}
