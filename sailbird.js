@@ -348,4 +348,13 @@ if (window.innerWidth <= 500) {
 }
 
 
+
+
+// Optional: If you want to add more interactivity, but the animation is CSS-based for smoothness.
+// No JS is strictly needed, but this can reset or adjust if needed.
+const items = document.querySelector('.items');
+items.addEventListener('animationiteration', () => {
+    // Reset transform to 0 for seamless loop, but with CSS it's already handled.
+});
+
 });
