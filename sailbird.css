@@ -1106,28 +1106,36 @@ footer p {
 
 .scroller {
     width: 100%;
-    /* max-width: 1200px; */
     overflow: hidden;
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
-    border-radius: 10px;
-    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* border-radius: 10px; */
+    background: linear-gradient(135deg, #6e8efb, #a777e3); /* Attractive gradient background */
     padding: 50px 20px;
     margin: 70px 0;
 }
 
 .items {
     display: flex;
-    animation: scroll 30s linear infinite;
+    flex-wrap: nowrap;
+    will-change: transform;
 }
 
 .item {
-    flex: 0 0 25%;
+    flex: 0 0 clamp(250px, 30vw, 350px); /* Responsive width */
+    min-width: 250px;
+    max-width: 350px;
     padding: 20px;
     text-align: center;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s ease-out forwards;
     animation-delay: calc(0.5s * var(--index));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:white; /* Semi-transparent white for contrast */
+    border-radius: 8px;
+    margin: 10px;
 }
 
 .item img {
@@ -1144,25 +1152,23 @@ footer p {
 }
 
 .item h2 {
-    font-size: 24px;
+    font-size: clamp(18px, 2.5vw, 22px); /* Responsive font size */
     margin: 10px 0;
     color: #333;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
 }
 
 .item p {
-    font-size: 16px;
+    font-size: clamp(14px, 2vw, 16px); /* Responsive font size */
     color: #666;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0 10px;
+    flex-grow: 1; /* Ensures text alignment consistency */
 }
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
 @keyframes fadeInUp {
     to {
         opacity: 1;
@@ -1173,4 +1179,36 @@ footer p {
 /* Pause on hover for better user experience */
 .scroller:hover .items {
     animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .item {
+        flex: 0 0 clamp(200px, 45vw, 300px);
+        min-width: 200px;
+    }
+    .item img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scroller {
+        margin: 5px;
+        padding: 10px;
+    }
+    .item {
+        flex: 0 0 90vw;
+        min-width: 90%;
+        margin: 5px;
+    }
+    .item img {
+        height: 120px;
+    }
+    .item h2 {
+        font-size: 18px;
+    }
+    .item p {
+        font-size: 14px;
+    }
 }

@@ -349,12 +349,56 @@ if (window.innerWidth <= 500) {
 
 
 
+const scroller = document.querySelector('.scroller');
+        const items = document.querySelector('.items');
+        const isPhone = window.matchMedia("(max-width: 480px)").matches;
+        const duration = isPhone ? 15000 : 30000; // Faster on phone devices: 15s vs 30s
+        const halfWidth = items.scrollWidth / 2;
+        let position = 0;
+        let startTime = null;
+        let animationId;
+        let isDragging = false;
+        let startX = 0;
+        let currentPosition = 0;
 
-// Optional: If you want to add more interactivity, but the animation is CSS-based for smoothness.
-// No JS is strictly needed, but this can reset or adjust if needed.
-const items = document.querySelector('.items');
-items.addEventListener('animationiteration', () => {
-    // Reset transform to 0 for seamless loop, but with CSS it's already handled.
-});
+        function animate(time) {
+            if (!startTime) startTime = time;
+            const elapsed = time - startTime;
+            const progress = elapsed / duration;
+            position = -halfWidth * (progress % 1);
+            items.style.transform = `translateX(${position}px)`;
+            animationId = requestAnimationFrame(animate);
+        }
 
+        requestAnimationFrame(animate);
+
+        // Add touch functionality only on phone
+        if (isPhone) {
+            scroller.addEventListener('touchstart', (e) => {
+                cancelAnimationFrame(animationId);
+                isDragging = true;
+                startX = e.touches[0].clientX;
+                currentPosition = position;
+                startTime = null; // Reset for resume
+            });
+
+            scroller.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                e.preventDefault();
+                const x = e.touches[0].clientX;
+                const delta = x - startX;
+                position = currentPosition + delta;
+                items.style.transform = `translateX(${position}px)`;
+            });
+
+            scroller.addEventListener('touchend', () => {
+                isDragging = false;
+                // Normalize position to [-halfWidth, 0)
+                position = ((position % halfWidth) + halfWidth) % halfWidth - halfWidth;
+                // Resume animation from current position
+                const currentProgress = -position / halfWidth;
+                startTime = performance.now() - (duration * currentProgress);
+                requestAnimationFrame(animate);
+            });
+        }
 });
