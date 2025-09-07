@@ -1107,9 +1107,9 @@ footer p {
 .scroller {
     width: 100%;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
     /* border-radius: 10px; */
-    background: linear-gradient(135deg, #6e8efb, #a777e3); /* Attractive gradient background */
+    /* background: linear-gradient(135deg, #6e8efb, #a777e3); */
     padding: 50px 20px;
     margin: 70px 0;
 }
