@@ -1,0 +1,13 @@
+# robots.txt — FROiD Cooling Products (froidindia.com)
+# Generated for best SEO crawling
+
+User-agent: *
+Allow: /
+
+# Block non-essential paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+
+# Sitemap location
+Sitemap: https://froidindia.com/sitemap.xml

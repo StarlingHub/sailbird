@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://froidindia.com/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://froidindia.com/assets/images/banner/hero-banner.jpg</image:loc>
+      <image:title>FROiD Insulin Cooler — India's Patented Tap Water-Activated Cooling Pouch</image:title>
+      <image:caption>FROiD portable insulin cooler maintains 18-30°C for 50+ hours. NTH certified. No ice, no electricity.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Products section -->
+  <url>
+    <loc>https://froidindia.com/#products</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://froidindia.com/assets/images/products/TWAIN-HooknLoop/1.jpg</image:loc>
+      <image:title>FROiD TWAIN Insulin Cooler Travel Case Black Hook n Loop</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://froidindia.com/assets/images/products/SINGLE-HooknLoop/1.jpg</image:loc>
+      <image:title>FROiD SINGLE Insulin Cooler Travel Case Black Hook n Loop</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://froidindia.com/assets/images/products/TWAIN-Zipper/1.jpg</image:loc>
+      <image:title>FROiD TWAIN Insulin Cooling Travel Wallet Beige Zipper</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://froidindia.com/assets/images/products/SINGLE-Zipper/1.jpg</image:loc>
+      <image:title>FROiD SINGLE Insulin Cooling Travel Wallet Beige Zipper</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://froidindia.com/assets/images/products/MINI-Zipper/1.jpg</image:loc>
+      <image:title>FROiD MINI Insulin Cooling Travel Wallet Beige Zipper</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://froidindia.com/assets/images/products/MEDIUM-Zipper/1.jpg</image:loc>
+      <image:title>FROiD MEDIUM Insulin Cooling Travel Wallet Beige Zipper</image:title>
+    </image:image>
+  </url>
+
+  <!-- How It Works -->
+  <url>
+    <loc>https://froidindia.com/#how</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Features -->
+  <url>
+    <loc>https://froidindia.com/#features</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Why FROiD -->
+  <url>
+    <loc>https://froidindia.com/#why</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://froidindia.com/#about</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://froidindia.com/#faq</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://froidindia.com/#contact</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
