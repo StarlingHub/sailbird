@@ -90,7 +90,31 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height:100vh;
 }
+
+.hero{max-width:800px;text-align:center;padding:30px}
+.hero h1{font-size:42px;margin:0 0 10px}.hero p{font-size:18px;color:#555}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:.3s;z-index:9999}
+.overlay.show{opacity:1;visibility:visible}
+.modal{width:min(80%,460px);background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.25);animation:pop .35s}
+@keyframes pop{from{transform:scale(.9) translateY(20px);opacity:0}to{transform:scale(1);opacity:1}}
+.top{display:flex; justify-content: center; background-color: black; padding:15px;color:#fff;text-align:center;position:relative}
+.badge{display:inline-block;background:#ffca28;color:#222;padding:6px 14px;border-radius:999px;font-weight:bold;font-size:13px}
+.close{position:absolute;right:16px;top:10px;background:none;border:none;color:#fff;font-size:30px;cursor:pointer}
+.icon{font-size:56px;margin:12px 0}
+.content{padding:15px}
+.content h2{text-align:center;margin-top:0}
+.content p{text-align:center;color:#666;line-height:1.7; padding-bottom: 5px;}
+.cards{display:flex; justify-content: center; text-align: start; margin:0 auto}
+.card{background:#f6f9fc;padding: 5px;text-align:start;font-size:14px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{flex:1;text-decoration:none;text-align:center;padding:14px;border-radius:10px;color:#fff;font-weight:bold}
+.buy{background:#0b84ff}.dist{background:#0a9d58}
+.footer{text-align:center;color:#888;font-size:13px;margin-top:18px}
+@media(max-width:600px){.cards{grid-template-columns:1fr}.btns{flex-direction:column}.hero h1{font-size:32px}}
+
+
 img { display: block; max-width: 100%; }
 a { text-decoration: none; color: inherit; }
 ul, ol { list-style: none; }
@@ -1510,6 +1534,10 @@ footer { background: var(--sap-d); padding: 60px 0 26px; }
   .con-cta { padding: 32px 24px; }
   .ab-actions { flex-direction: column; }
   .ab-actions .btn { justify-content: center; }
+  #topbar{
+    padding: 50px 10px !important;
+  }
+  .modal{height: 95vh }
 }
 
 /* Small Mobile (380px) */
