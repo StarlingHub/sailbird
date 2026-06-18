@@ -10,7 +10,7 @@ const o=document.getElementById('overlay');
 const key='insulinPopupShownDemo';
 // if(!localStorage.getItem(key)){
 // }
-const clearPopuptimeout = setTimeout(()=>{o.classList.add('show');localStorage.setItem(key,'1');},10000);
+const clearPopuptimeout = setTimeout(()=>{o.classList.add('show');localStorage.setItem(key,'1');},20000);
 function hide(){o.classList.remove('show'), clearTimeout(clearPopuptimeout)}
 document.getElementById('close').onclick=hide;
 o.onclick=e=>{if(e.target===o)hide(); clearTimeout(clearPopuptimeout)}
