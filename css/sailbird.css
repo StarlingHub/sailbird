@@ -1537,7 +1537,7 @@ footer { background: var(--sap-d); padding: 60px 0 26px; }
   #topbar{
     padding: 50px 10px !important;
   }
-  .modal{height: 95vh }
+  .modal{max-height: 95vh; }
 }
 
 /* Small Mobile (380px) */
