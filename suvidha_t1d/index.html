@@ -395,15 +395,31 @@
   }
   @media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important;}}
   :focus-visible{outline:3px solid var(--gold-deep);outline-offset:2px;}
+
+
+
+/***** Slide Right *****/
+.slide-right {
+  animation: 3s ease-in-out slide-right;
+}
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: -7%;
+  }
+}
+
 </style>
 </head>
 <body>
 
 <header>
   <div class="header-inner">
-    <a href="https://froidindia.com/" class="logo"><img id="logo" src="https://froidindia.com/assets/images/banner/logo.jpg" alt="FROiD Insulin Cooler India" width="100" height="40"> <span style="color: black; margin-left: 5px;font-family: Arial, Helvetica, sans-serif;font-size: 15px;"><i>x Suvidha</i></span></a>
+    <a style="animation: ease-in-out;" href="https://froidindia.com/" class="logo"><img id="logo" src="https://froidindia.com/assets/images/banner/logo.jpg" alt="FROiD Insulin Cooler India" width="100" height="40"> <span class="slide-right shinenow" style="color: black; margin-left: 5px;font-family: Arial, Helvetica, sans-serif;font-size: 12px; border: 1px solid black; padding: 5px; border-radius: 5px;margin: 0;margin-left: -10px; padding-left: 15px;padding-right: 7px;background: linear-gradient(135deg, var(--gold-deep), var(--gold-darker));color: white;z-index: -1;"><i>x Suvidha</i></span></a>
     <div class="header-cta">
-      <a href="https://froidindia.com/" class="btn btn-outline">Back to Main Site</a>
+      <a href="https://froidindia.com/" class="btn btn-outline">Go to Main Site</a>
     </div>
   </div>
 </header>
@@ -463,7 +479,7 @@
         <div><b id="mm">00</b><span>Min</span></div>
         <div><b id="ss">00</b><span>Sec</span></div>
       </div> -->
-      <span class="shinenow" style="color: white; text-align: center; font-size: 30px; padding: 0; margin-bottom: 25px; color: goldenrod;"><i>Exclusive Community Pricing ⭐</i></span>
+      <span class="shinenow" style="color: white; text-align: center; font-size: 30px; padding: 0; margin-bottom: 25px; color: #EDF2E9;"><i><strong>Exclusive Community Pricing</strong></i></span>
     </div>
   </div>
 </section>
@@ -497,7 +513,7 @@
 		  <div class="ptags"><span>Carry 2 Insulin Pens</span><span>Zipper Closure</span><span>Beige</span></div>
 		  <div class="price-box">
 			<div class="mrp-row"><strong>MRP:</strong><span style="font-weight: bold; color: black;" class="mrp">₹2,290</span><span class="site"><strong><i>Official Site price ₹1,947</i></strong></span></div>
-			<div class="final"><b>₹1,797</b><small><strong><i>Your community price</i></strong></small></div>
+			<div class="final"><b>₹1,847</b><small><strong><i>Your community price</i></strong></small></div>
 			  <div style="font-size: 12px;font-weight: bold; color: #8C2C55;"><i>Free Shipping Across India & All Taxes Included</i></div>
 		      </div>
 		  <div class="pcard-actions">
@@ -515,7 +531,7 @@
           <div class="ptags"><span>Carry 2 Insulin Pens</span><span>Hook & Loop</span><span>Black</span></div>
           <div class="price-box">
 		<div class="mrp-row"><strong>MRP:</strong><span style="font-weight: bold; color: black;" class="mrp">₹1,990</span><span class="site"><strong><i>Official Site price ₹1,692</i></strong></span></div>
-		<div class="final"><b>₹1,542</b><small><strong><i>Your community price</i></strong></small></div>
+		<div class="final"><b>₹1,592</b><small><strong><i>Your community price</i></strong></small></div>
 			  <div style="font-size: 12px;font-weight: bold; color: #8C2C55;"><i>Free Shipping Across India & All Taxes Included</i></div>
 	      </div>
           <div class="pcard-actions">
@@ -532,7 +548,7 @@
           <div class="ptags"><span>Carry 1 Insulin Pen</span><span>Hook & Loop</span><span>Black</span></div>
           <div class="price-box">
 		  <div class="mrp-row"><strong>MRP:</strong><span style="font-weight: bold; color: black;" class="mrp">₹1,690</span><span class="site"><strong><i>Official Site price ₹1,437</i></strong></span></div>
-		  <div class="final"><b>₹1,287</b><small><strong><i>Your community price</i></strong></small></div>
+		  <div class="final"><b>₹1,337</b><small><strong><i>Your community price</i></strong></small></div>
 			  <div style="font-size: 12px;font-weight: bold; color: #8C2C55;"><i>Free Shipping Across India & All Taxes Included</i></div>
 		</div>
           <div class="pcard-actions">
@@ -549,7 +565,7 @@
           <div class="ptags"><span>Carry 1 Insulin Pen</span><span>Zipper Closure</span><span>Beige</span></div>
 	  <div class="price-box">
 		<div class="mrp-row"><strong>MRP:</strong><span style="font-weight: bold; color: black;" class="mrp">₹1,990</span><span class="site"><strong><i>Official Site price ₹1,692</i></strong></span></div>
-		<div class="final"><b>₹1,542</b><small><strong><i>Your community price</i></strong></small></div>
+		<div class="final"><b>₹1,592</b><small><strong><i>Your community price</i></strong></small></div>
 		  <div style="font-size: 12px;font-weight: bold; color: #8C2C55;"><i>Free Shipping Across India & All Taxes Included</i></div>
 	      </div>
           <div class="pcard-actions">
@@ -566,7 +582,7 @@
           <div class="ptags"><span>1×5ml Vial</span><span>1×10ml Vial</span><span>2×5ml Vials</span></div>
           <div class="price-box">
 		<div class="mrp-row"><strong>MRP:</strong><span style="font-weight: bold; color: black;" class="mrp">₹1,690</span><span class="site"><strong><i>Official Site price ₹1,437</i></strong></span></div>
-		<div class="final"><b>₹1,287</b><small><strong><i>Your community price</i></strong></small></div>
+		<div class="final"><b>₹1,337</b><small><strong><i>Your community price</i></strong></small></div>
 			  <div style="font-size: 12px;font-weight: bold; color: #8C2C55;"><i>Free Shipping Across India & All Taxes Included</i></div>
 	      </div>
           <div class="pcard-actions">
@@ -583,7 +599,7 @@
           <div class="ptags"><span>2×5ml</span><span>2×10ml Vials</span><span>4×5ml Vials</span></div>
           <div class="price-box">
 		<div class="mrp-row"><strong>MRP:</strong><span style="font-weight: bold; color: black;" class="mrp">₹2,190</span><span class="site"><strong><i>Official Site price ₹₹1,862</i></strong></span></div>
-		<div class="final"><b>₹1,712</b><small><strong><i>Your community price</i></strong></small></div>
+		<div class="final"><b>₹1,762</b><small><strong><i>Your community price</i></strong></small></div>
 			  <div style="font-size: 12px;font-weight: bold; color: #8C2C55;"><i>Free Shipping Across India & All Taxes Included</i></div>
 	      </div>
           <div class="pcard-actions">
