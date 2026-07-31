@@ -1,0 +1,2095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarika Sharma x FROiD | Exclusive Community Offer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==========================================================================
+           CSS VARIABLES & RESET
+           ========================================================================== */
+        :root {
+            --primary: #111111;
+            --primary-hover: #2C2C2C;
+            --secondary: #444444;
+            --accent: #18B56A;
+            --accent-pink: #ff1493;
+            --bg-lavender: #F8F8F8;
+            --bg-blue: #FAFAF8;
+            --bg-white: #FFFFFF;
+            --text-main: #1F2937;
+            --text-muted: #6B7280;
+            --success: #22C55E;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --glass-bg: rgba(255, 255, 255, 0.75);
+            --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 15px 40px rgba(123, 97, 255, 0.15);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-full: 999px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-main);
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ==========================================================================
+           UTILITIES & COMPONENTS
+           ========================================================================== */
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(123, 97, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(123, 97, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--bg-lavender);
+        }
+        .btn-pink {
+            background-color: transparent;
+            color: var(--accent-pink);
+            border: 2px solid var(--accent-pink);
+        }
+        .btn-pink-dark {
+            background-color: var(--accent-pink);
+            color: var(--bg-white);
+            border: 2px solid var(--accent-pink);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--bg-lavender);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--bg-lavender);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background:#F8F8F8;
+            color: var(--primary);
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .badge-success {
+            background: #dcfce7;
+            color: var(--success);
+        }
+
+        /* ==========================================================================
+           ANIMATIONS
+           ========================================================================== */
+        @keyframes shimmer {
+            0% { background-position: -1000px 0; }
+            100% { background-position: 1000px 0; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 0 0 rgba(123, 97, 255, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(123, 97, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(123, 97, 255, 0); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==========================================================================
+           ANNOUNCEMENT BAR & NAVBAR
+           ========================================================================== */
+        .announcement-bar {
+            background: linear-gradient(90deg, var(--accent-pink) 0%, var(--primary) 100%);
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-size: 1000px 100%;
+            animation: shimmer 3s infinite linear;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 41px; /* Below announcement */
+            z-index: 99;
+            padding: 15px 0;
+            transition: var(--transition);
+            background: transparent;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 32px;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        @media (min-width: 768px) {
+            .nav-links { display: flex; }
+        }
+
+        /* ==========================================================================
+           HERO SECTION
+           ========================================================================== */
+        .hero {
+            padding: 4rem 0 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg-blobs {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.5;
+        }
+
+        .blob-1 { top: -10%; right: -5%; width: 400px; height: 400px; background:#F8F8F8; }
+        .blob-2 { bottom: -10%; left: -5%; width: 300px; height: 300px; background: var(--bg-blue); }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 992px) {
+            .hero-grid { grid-template-columns: 1.1fr 0.9fr; gap: 4rem; }
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        @media (min-width: 768px) {
+            .hero-content h1 { font-size: 3.5rem; }
+        }
+
+        .hero-content p {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .trust-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--primary);
+            flex-wrap: wrap;
+	    margin: 0;
+	    padding: 0;
+	    color: var(--accent-pink);
+        }
+
+	.trust-row > .badge{
+		margin: 0;
+		background: var(--accent-pink);
+		color: white;
+	}
+
+        .stars { color: #F59E0B; letter-spacing: 2px; }
+
+        .hero-image-wrapper {
+            position: relative;
+        }
+
+        .hero-image {
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+        }
+
+        .floating-card {
+            position: absolute;
+            padding: 12px 20px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            animation: float 4s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .fc-1 { top: 10%; right: -20px; animation-delay: 0s; }
+        .fc-2 { bottom: 15%; left: -20px; animation-delay: 2s; }
+        
+        .fc-icon {
+            width: 24px;
+            height: 24px;
+            background:#F8F8F8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+        }
+
+        /* ==========================================================================
+           MEET SARIKA
+           ========================================================================== */
+        .about {
+            padding: 5rem 0;
+            background: #FAFAFA;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+            background: #fff;
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-soft);
+        }
+
+        @media (min-width: 768px) {
+            .about-grid { grid-template-columns: 1fr 1fr; padding: 4rem; gap: 4rem; }
+        }
+
+        .about-image {
+            border-radius: var(--radius-md);
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .about-content p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        /* ==========================================================================
+           FEATURES (WHY I RECOMMEND)
+           ========================================================================== */
+        .features {
+            padding: 5rem 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-soft);
+            border-color: var(--bg-lavender);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--bg-lavender), var(--bg-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* ==========================================================================
+           PRODUCTS (COMBOS & INDIVIDUALS)
+           ========================================================================== */
+        /* ==========================================================================
+           PRODUCTS (COMBOS & INDIVIDUALS)
+           ========================================================================== */
+	   .products {
+            padding: 5rem 0;
+            background: #FAFAF8; /* Softer off-white for contrast against pure white cards */
+        }
+        
+        .products.combos {
+            background: #FFFFFF;
+            padding-bottom: 2rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .product-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+        }
+
+        /* Modern, Clean Card Container */
+        .product-card {
+            background: #FFFFFF;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03);
+            transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-img-wrapper {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            background: #F8F8F8;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .product-card:hover .product-img {
+            transform: scale(1.06);
+        }
+
+        /* Minimalist Premium Badges */
+        .p-badges {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            z-index: 2;
+        }
+
+        .p-badge {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-main);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .p-badge.save { 
+            background: var(--primary); 
+            color: #FFFFFF; 
+        }
+
+        /* Clean Content Area */
+        .product-content {
+            padding: 2rem 1.8rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+            color: var(--primary);
+        }
+
+        /* Subtle Pill-Shaped Tags */
+        .product-features {
+            display: flex;
+            gap: 8px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .product-features span {
+            background: transparent;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        /* Integrated Pricing (Removed heavy grey box) */
+        .pricing-block {
+            margin-top: auto;
+            margin-bottom: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .mrp {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-decoration: line-through;
+        }
+
+        .community-price {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .price-note {
+            font-size: 0.75rem;
+            color: var(--success);
+            font-weight: 600;
+            margin-top: 0.25rem;
+        }
+
+        /* Sleek Button */
+        .btn-buy {
+            width: 100%;
+            background-color: var(--primary);
+            color: #FFFFFF;
+            border-radius: 12px;
+            padding: 14px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-buy:hover {
+            background-color: #000000;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        /* ==========================================================================
+           HOW TO REDEEM (3 STEPS)
+           ========================================================================== */
+        .steps {
+            padding: 5rem 0;
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            position: relative;
+        }
+        
+        @media (min-width: 768px) {
+            .steps-grid { grid-template-columns: repeat(3, 1fr); }
+            .steps-grid::before {
+                content: '';
+                position: absolute;
+                top: 30px;
+                left: 10%;
+                right: 10%;
+                height: 2px;
+                background:#F8F8F8;
+                z-index: 0;
+            }
+        }
+        
+        .step-card {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+            border: 6px solid #fff;
+            box-shadow: var(--shadow-soft);
+        }
+
+        /* ==========================================================================
+           COMPARISON
+           ========================================================================== */
+        .comparison {
+            padding: 5rem 0;
+            background: #FAFAFA;
+        }
+        
+        .comparison-table {
+            background: #fff;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .comp-row {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.3s ease;
+        }
+        
+        .comp-row:hover { background: #f9f9f9; }
+        .comp-row:last-child { border-bottom: none; }
+        
+        .comp-cell {
+            padding: 1.25rem 1rem;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .comp-header {
+            font-weight: 600;
+            background: #f9f9f9;
+            font-size: 1.05rem;
+        }
+        
+        .comp-cell:nth-child(2) { color: var(--text-muted); text-align: center; justify-content: center; }
+        .comp-cell:nth-child(3) { 
+            background:#F8F8F8; 
+            color: var(--primary); 
+            font-weight: 600;
+            text-align: center; 
+            justify-content: center;
+        }
+        
+        .icon-check { color: var(--success); font-weight: bold; }
+        .icon-cross { color: #ef4444; }
+        
+        @media (max-width: 600px) {
+            .comp-row { grid-template-columns: 1fr 1fr; }
+            .comp-cell:nth-child(1) { grid-column: span 2; font-weight: 600; padding-bottom: 0; border-bottom: none; }
+            .comp-header .comp-cell:nth-child(1) { display: none; }
+        }
+
+        /* ==========================================================================
+           SOCIAL PROOF (REVIEWS)
+           ========================================================================== */
+        .reviews {
+            padding: 5rem 0;
+        }
+
+        .reviews-slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 2rem;
+            padding: 1rem 0 3rem;
+            -ms-overflow-style: none;  
+            scrollbar-width: none;  
+        }
+        
+        .reviews-slider::-webkit-scrollbar { display: none; }
+
+        .review-card {
+            min-width: 85%;
+            scroll-snap-align: center;
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-color);
+        }
+
+        @media (min-width: 768px) {
+            .review-card { min-width: 400px; }
+            .reviews-slider { justify-content: center; scroll-snap-type: none; flex-wrap: wrap;}
+        }
+
+        .stars-review {
+            color: #F59E0B;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .reviewer {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .reviewer-avatar {
+            width: 48px;
+            height: 48px;
+            background:#F8F8F8;
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .reviewer-info h4 { font-size: 1rem; margin-bottom: 0.2rem; }
+        .reviewer-info p { font-size: 0.85rem; color: var(--text-muted); }
+
+        /* ==========================================================================
+           FAQ
+           ========================================================================== */
+        .faq {
+            padding: 5rem 0;
+            background: #FAFAFA;
+        }
+
+        .faq-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 1.25rem 1.5rem;
+            background: transparent;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-main);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+            padding: 0 1.5rem;
+            color: var(--text-muted);
+        }
+
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+        .faq-item.active .faq-answer {
+            max-height: 300px; /* arbitrary high number */
+            padding-bottom: 1.25rem;
+            transition: max-height 0.4s ease-in-out;
+        }
+
+        /* ==========================================================================
+           FINAL CTA & FOOTER
+           ========================================================================== */
+        .final-cta {
+            padding: 6rem 20px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary), var(--accent-pink));
+            color: white;
+        }
+
+        .cta-content h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .btn-white:hover {
+            transform: scale(1.05);
+            background: #f9f9f9;
+        }
+        
+        .cta-trust {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            flex-wrap: wrap;
+        }
+
+        footer {
+            padding: 4rem 0 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover { color: var(--primary); }
+        .copyright { font-size: 0.8rem; color: var(--text-muted); }
+
+        /* ==========================================================================
+           MOBILE STICKY CTA
+           ========================================================================== */
+        .mobile-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid var(--border-color);
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+        
+        .mobile-cta.visible { transform: translateY(0); }
+
+        .m-cta-text { font-size: 0.85rem; font-weight: 600; line-height: 1.2; }
+        .m-cta-text span { color: var(--accent-pink); }
+
+
+
+
+	/* ==========================================================================
+	FROiD CUSTOM PRODUCT CARD (COMMUNITY CHOICE)
+	========================================================================== */
+
+	.froid-card {
+	background: #FFFFFF;
+	border-radius: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	max-width: 380px; /* Adjust or remove if placing inside a CSS grid */
+	font-family: 'Inter', sans-serif;
+	}
+
+	.froid-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+	}
+
+	/* --- Image & Badge --- */
+	.fc-image-container {
+	position: relative;
+	aspect-ratio: 4/3;
+	background: #F8F8F8;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	}
+
+	.fc-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.6s ease;
+	}
+
+	.froid-card:hover .fc-image {
+	transform: scale(1.04);
+	}
+
+	.fc-top-badge {
+	position: absolute;
+	top: 16px;
+	left: 16px;
+	background: #111111;
+	color: #FFFFFF;
+	padding: 6px 14px;
+	border-radius: 30px;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	z-index: 2;
+	}
+
+	/* --- Content Area --- */
+	.fc-content {
+	padding: 1.75rem;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	}
+
+	/* --- Dynamic Rating Stars --- */
+	.fc-rating-row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 12px;
+	margin-top: -10px;
+	}
+
+	.fc-stars {
+	display: inline-block;
+	font-size: 1.1rem;
+	font-family: Times, serif; /* Ensures consistent unicode star rendering */
+	line-height: 1;
+	}
+
+	.fc-stars::before {
+	content: '★★★★★';
+	letter-spacing: 2px;
+	/* This gradient fills the stars based on the --rating CSS variable */
+	background: linear-gradient(90deg, #FF1493 calc(var(--rating) / 5 * 100%), #E5E7EB calc(var(--rating) / 5 * 100%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	}
+
+	.fc-review-count {
+	font-size: 0.85rem;
+	color: #6B7280;
+	font-weight: 500;
+	}
+
+	/* --- Titles --- */
+	.fc-title {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: #111111;
+	margin-bottom: 6px;
+	line-height: 1.3;
+	}
+
+	.fc-subtitle {
+	font-size: 0.9rem;
+	color: #6B7280;
+	margin-bottom: 20px;
+	}
+
+	/* --- Pricing --- */
+	.fc-pricing-row {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 10px;
+	}
+
+	.fc-current-price {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #111111;
+	line-height: 1;
+	}
+
+	.fc-old-price {
+	font-size: 0.95rem;
+	color: #9CA3AF;
+	text-decoration: line-through;
+	}
+
+	.fc-save-badge {
+	background: #FF1493;
+	color: whitesmoke;
+	padding: 4px 10px;
+	border-radius: 6px;
+	font-size: 0.75rem;
+	font-weight: 400;
+	}
+	.fc-discount-badge {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	background: #ff1493;
+	color: #fff;
+	padding: 6px 12px;
+	border-radius: 999px;
+	font-size: 0.75rem;
+	font-weight: 400;
+	margin: 10px 0;
+	box-shadow: 0 0 0 rgba(255,20,147,.6);
+	animation: pulseWave 1.6s infinite ease-in-out,
+		floatBadge 3s infinite ease-in-out;
+	}
+
+	/* Live dot */
+	.fc-discount-badge::before{
+	content:"";
+	width:8px;
+	height:8px;
+	background:#fff;
+	border-radius:50%;
+	animation: blinkDot 1s infinite;
+	}
+
+	/* Expanding wave */
+	.fc-discount-badge::after{
+	content:"";
+	position:absolute;
+	inset:0;
+	border-radius:999px;
+	border:2px solid rgba(255,20,147,.5);
+	animation: ripple 1.6s infinite;
+	pointer-events:none;
+	}
+
+	/* Glow Pulse */
+	@keyframes pulseWave{
+	0%{
+		box-shadow:0 0 0 0 rgba(255,20,147,.6);
+	}
+	70%{
+		box-shadow:0 0 0 12px rgba(255,20,147,0);
+	}
+	100%{
+		box-shadow:0 0 0 0 rgba(255,20,147,0);
+	}
+	}
+
+	/* Ripple border */
+	@keyframes ripple{
+	0%{
+		transform:scale(1);
+		opacity:.8;
+	}
+	100%{
+		transform:scale(1.15);
+		opacity:0;
+	}
+	}
+
+	/* White live dot blinking */
+	@keyframes blinkDot{
+	0%,100%{
+		opacity:1;
+	}
+	50%{
+		opacity:.2;
+	}
+	}
+
+	/* Gentle floating */
+	@keyframes floatBadge{
+	0%,100%{
+		transform:translateY(0);
+	}
+	50%{
+		transform:translateY(-2px);
+	}
+	}
+
+	/* --- Features List --- */
+	.fc-features-list {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 24px 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	}
+
+	.fc-features-list li {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 0.9rem;
+	color: #374151;
+	font-weight: 500;
+	}
+
+	.fc-check {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	background: var(--accent-pink);
+	color: #FFFFFF;
+	border-radius: 50%;
+	font-size: 0.7rem;
+	font-weight: bold;
+	}
+
+	/* --- Button --- */
+	.fc-btn {
+	width: 100%;
+	background-color: #111111;
+	color: #FFFFFF;
+	border: none;
+	padding: 14px;
+	border-radius: 12px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.2s ease, transform 0.2s ease;
+	margin-top: auto; /* Pushes button to bottom if cards are different heights */
+	}
+
+	.fc-btn:hover {
+	background-color: #2C2C2C;
+	transform: translateY(-2px);
+	}
+
+
+
+	.logo{display: flex; align-items: center; justify-content: center; font-family:'Fraunces',serif;font-size:23px;font-weight:800;color:var(--navy);border-radius: 5px !important;}
+	#logo{border-radius: 5px !important;}
+	.logo span{color:var(--ice);}
+
+
+	/***** Slide Right *****/
+	.slide-right {
+	animation: 3s ease-in-out slide-right;
+	}
+	@keyframes slide-right {
+	from {
+	margin-left: -100%;
+	}
+	to {
+	margin-left: -7%;
+	}
+	}
+
+        @media (min-width: 768px) {
+            .mobile-cta { display: none; }
+        }
+        @media (max-width: 768px) {
+
+	    .announcement-bar{
+		font-size: 0.75rem;
+	    }
+
+	    .navbar{
+		padding: 10px 0;
+	    }
+	    .navbar > .container > .btn-pink{
+		padding: 5px 10px;
+	    }
+        }
+
+	@media (max-width: 480px) {
+		.announcement-bar{
+		font-size: 0.65rem;
+	    }
+	    .navbar{
+		top: 30px;
+	    }
+	}
+	@media (max-width: 450px) {
+		.announcement-bar{
+		font-size: 0.55rem;
+	    }
+	    .navbar{
+		top: 30px;
+	    }
+	}
+	@media (max-width: 425px) {
+		.announcement-bar{
+		font-size: 0.45rem;
+	    }
+	    .navbar{
+		top: 30px;
+	    }
+
+	    .container{
+		padding: 0 7px;
+	    }
+	    .navbar > .container > .btn-pink{
+		padding: 5px 8px;
+		font-size: 0.85rem;
+	    }
+	}
+    </style>
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+	Welcome to Sarika's Community! Exclusive 5% discount is automatically applied.
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+		<a style="animation: ease-in-out;" href="https://froidindia.com/" class="logo"><img id="logo" src="https://froidindia.com/assets/images/banner/logo.jpg" alt="FROiD Insulin Cooler India" width="100" height="40"> <span class="slide-right shinenow" style="color: black; margin-left: 5px;font-family: Arial, Helvetica, sans-serif;font-size: 12px; border: 1px solid var(--accent-pink); padding: 5px; border-radius: 5px;margin: 0;margin-left: -10px; padding-left: 15px;padding-right: 7px;background: linear-gradient(135deg, var(--accent-pink), var(--accent-pink));color: white;z-index: -1;"><i>x Sarika</i></span></a>
+            <div class="nav-links">
+                <a href="#about">Meet Sarika</a>
+                <a href="#features">Why FROiD</a>
+                <a href="#products">Collection</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <a href="#products" class="btn btn-pink">Go to Main Site</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg-blobs">
+            <div class="blob blob-1 parallax" data-speed="15"></div>
+            <div class="blob blob-2 parallax" data-speed="-20"></div>
+        </div>
+        <div class="container hero-grid">
+            <div class="hero-content reveal">
+                <div class="fc-discount-badge">
+                    Recommended by Sarika Sharma <br>Type 1 Diabetes Warrior
+                </div>
+                <h1>Keep Your Insulin Cool Wherever Life Takes You.</h1>
+                <h3>#T1D Community Exclusive Pricing</h3>
+                <p>Special discounted prices exclusively for the followers and Type 1 Diabetes community of Sarika Sharma.</p>
+                <div class="hero-ctas">
+                    <a href="#products" class="btn btn-pink-dark">Shop Community Collection</a>
+                    <a href="#about" class="btn btn-pink">Meet Sarika</a>
+                </div>
+                <div class="trust-row">
+                    <span class="badge">Trusted by Thousands</span>
+                    <span class="badge">Official Website</span>
+                    <span class="badge">50+ Hours of Insulin Cooling*</span>
+                    <span class="badge">Free Shipping Across India</span>
+                </div>
+            </div>
+            
+            <div class="hero-image-wrapper reveal" style="transition-delay: 0.2s">
+                <img src="hero-sarika.jpg" alt="Sarika holding FROiD wallet" class="hero-image parallax" data-speed="5" 
+                     onerror="this.src='./assets/sarika.jp'">
+                
+                <div class="floating-card glass fc-1 parallax" data-speed="30">
+                    <div class="fc-icon">✓</div>
+                T1D Advocate
+                </div>
+                
+                <div class="floating-card glass fc-2 parallax" data-speed="-25">
+                    <div class="fc-icon">✨</div>
+                    Community Price Applied
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Meet Sarika -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid reveal">
+                <img src="sarika-about.jpg" alt="Sarika Sharma" class="about-image"
+                     onerror="this.src='./assets/sarika.jp'">
+                <div class="about-content">
+                    <div class="fc-discount-badge">T1d Advocate</div>
+                    <h2>Meet Sarika Sharma</h2>
+                    <p>Hi, I'm Sarika. Living with Type 1 Diabetes means carrying insulin wherever I go—whether it's on flights, to college, or just a weekend trip.</p>
+                    <p>I don't want to think about ice packs melting in my bag. After trying FROiD, I wanted to share it with my community because it just works. You soak it in tap water, and you're good for 50+ hours*.</p>
+                    <p>I've partnered with FROiD to bring you this official page with an <strong>exclusive 5% discount</strong>, so you can have the same peace of mind.</p>
+                    <a href="https://instagram.com/sarika.t1d" target="_blank" class="btn btn-pink" style="margin-top: 1rem;">Follow on Instagram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="fc-discount-badge">Why I Recommend FROiD</div>
+                <h2>Peace of Mind, Backed by Guarantees</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card reveal" style="transition-delay: 0.1s">
+                    <h3>Tap Water Activated</h3>
+                    <p>No ice or electricity needed. Just soak the inner pouch in ordinary tap water for 10 minutes.</p>
+                </div>
+                <div class="feature-card reveal" style="transition-delay: 0.2s">
+                    <h3>50+ Hours of Insulin Cooling*</h3>
+                    <p>Maintains a safe 18–30°C temperature for over two days, perfect for long travel.</p>
+                </div>
+                <div class="feature-card reveal" style="transition-delay: 0.3s">
+                    <h3>NTH Certified & Patented</h3>
+                    <p>Tested and certified by India's National Test House. Backed by a granted patent.</p>
+                </div>
+                <div class="feature-card reveal" style="transition-delay: 0.4s">
+                    <h3>Peace of Mind with 1-Year Warranty</h3>
+                    <p>Completely reusable with no recurring costs, and covered against manufacturing defects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Combo Deals (Premium Value) -->
+    <section class="products combos">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="fc-discount-badge">Best Value for Money</div>
+                <h2>Save More with Exclusive Combo Deals</h2>
+                <p style="color: var(--text-muted); margin-top: 10px;">Perfect for keeping separate wallets for home and travel.</p>
+            </div>
+            
+            <div class="product-grid">
+		    <!-- Combo 1 -->
+		    <div class="froid-card">
+			<!-- Image & Top Badge -->
+			<div class="fc-image-container">
+			    <div class="fc-top-badge">Best Seller</div>
+			    <img src="https://froidindia.com/assets/images/products/COMBO-1.jpg" alt="Twain Zipper Wallet" class="fc-image" onerror="this.src='https://froidindia.com/assets/images/products/COMBO-1.jpg'">
+			</div>
+		    
+			<div class="fc-content">
+			    <!-- Dynamic Star Rating -->
+			    <div class="fc-rating-row">
+				
+				<div class="fc-stars" style="--rating: 4.5;" aria-label="Rating is 4.9 out of 5"></div>
+				<span class="fc-review-count">4.5</span>
+			    </div>
+		    
+			    <!-- Titles -->
+			    <h3 class="fc-title">Combo Pack – 2 Pen Wallet (Zipper) + 4 Vial Wallet (Zipper)</h3>
+			    <p class="fc-subtitle">Keeps insulin cool 50+ hours*</p>
+		    
+			    <!-- Pricing -->
+			    <div class="fc-pricing-row">
+				<span class="fc-current-price">₹3,559</span>
+				<span class="fc-old-price">₹4,480</span>
+				<span class="fc-save-badge">Save ₹921</span>
+			    </div>
+		    
+			    <!-- Feature List -->
+			    <ul class="fc-features-list">
+				<li><span class="fc-check">✓</span> Inclusive of all taxes</li>
+				<li><span class="fc-check">✓</span> Free Shipping Across India 🇮🇳</li>
+				<li><span class="fc-check">✓</span> Official 1 Year Warranty</li>
+				<li><span class="fc-check">✓</span> No Hidden Charges</li>
+				<li><span class="fc-check">✓</span> Payment Secured by Razorpay</li>
+				
+			    </ul>
+		    
+			    <!-- CTA -->
+			    <button class="fc-btn">Buy Now</button>
+			</div>
+		    </div>
+
+
+
+		    <!-- Combo 2 -->
+		    <div class="froid-card">
+			<!-- Image & Top Badge -->
+			<div class="fc-image-container">
+			    <div class="fc-top-badge">Family Pack</div>
+			    <img src="https://froidindia.com/assets/images/products/COMBO-2.jpg" alt="Twain Zipper Wallet" class="fc-image" onerror="this.src='https://froidindia.com/assets/images/products/COMBO-2.jpg'">
+			</div>
+		    
+			<div class="fc-content">
+			    <!-- Dynamic Star Rating -->
+			    <div class="fc-rating-row">
+				
+				<div class="fc-stars" style="--rating: 4.5;" aria-label="Rating is 4.9 out of 5"></div>
+				<span class="fc-review-count">4.5</span>
+			    </div>
+		    
+			    <!-- Titles -->
+			    <h3 class="fc-title">Combo Pack – Twain Zipper Wallet + Twain Hook n Loop Wallet</h3>
+			    <p class="fc-subtitle">Keeps insulin cool 50+ hours*</p>
+		    
+			    <!-- Pricing -->
+			    <div class="fc-pricing-row">
+				<span class="fc-current-price">₹3,389</span>
+				<span class="fc-old-price">₹4,280</span>
+				<span class="fc-save-badge">Save ₹891</span>
+			    </div>
+		    
+			    <!-- Feature List -->
+			    <ul class="fc-features-list">
+				<li><span class="fc-check">✓</span> Inclusive of all taxes</li>
+				<li><span class="fc-check">✓</span> Free Shipping Across India 🇮🇳</li>
+				<li><span class="fc-check">✓</span> Official 1 Year Warranty</li>
+				<li><span class="fc-check">✓</span> No Hidden Charges</li>
+				<li><span class="fc-check">✓</span> Payment Secured by Razorpay</li>
+				
+			    </ul>
+		    
+			    <!-- CTA -->
+			    <button class="fc-btn">Buy Now</button>
+			</div>
+		    </div>
+
+
+
+		    <!-- Combo 3 -->
+		    <div class="froid-card">
+			<!-- Image & Top Badge -->
+			<div class="fc-image-container">
+			    <div class="fc-top-badge">Bundle Deal</div>
+			    <img src="https://froidindia.com/assets/images/products/COMBO-3.jpg" alt="Twain Zipper Wallet" class="fc-image" onerror="this.src='https://froidindia.com/assets/images/products/COMBO-3.jpg'">
+			</div>
+		    
+			<div class="fc-content">
+			    <!-- Dynamic Star Rating -->
+			    <div class="fc-rating-row">
+				
+				<div class="fc-stars" style="--rating: 4.5;" aria-label="Rating is 4.9 out of 5"></div>
+				<span class="fc-review-count">4.5</span>
+			    </div>
+		    
+			    <!-- Titles -->
+			    <h3 class="fc-title">Combo Pack – Twain Zipper Wallet + Twain Hook n Loop Wallet</h3>
+			    <p class="fc-subtitle">Keeps insulin cool 50+ hours*</p>
+		    
+			    <!-- Pricing -->
+			    <div class="fc-pricing-row">
+				<span class="fc-current-price">₹3,049</span>
+				<span class="fc-old-price">₹3,880</span>
+				<span class="fc-save-badge">Save ₹831</span>
+			    </div>
+		    
+			    <!-- Feature List -->
+			    <ul class="fc-features-list">
+				<li><span class="fc-check">✓</span> Inclusive of all taxes</li>
+				<li><span class="fc-check">✓</span> Free Shipping Across India 🇮🇳</li>
+				<li><span class="fc-check">✓</span> Official 1 Year Warranty</li>
+				<li><span class="fc-check">✓</span> No Hidden Charges</li>
+				<li><span class="fc-check">✓</span> Payment Secured by Razorpay</li>
+				
+			    </ul>
+		    
+			    <!-- CTA -->
+			    <button class="fc-btn">Buy Now</button>
+			</div>
+		    </div>
+		   
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Individual Products -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="fc-discount-badge">Shop Individual</div>
+                <h2>The Community Collection</h2>
+                <p style="color: var(--text-muted); margin-top: 10px;">Prices below include the 5% Sarika discount automatically.</p>
+            </div>
+            
+            <div class="product-grid">
+		    
+		    <div class="froid-card">
+			<!-- Image & Top Badge -->
+			<div class="fc-image-container">
+			    <div class="fc-top-badge">Most Loved</div>
+			    <img style="background: white; object-fit: contain;" src="https://froidindia.com/assets/images/products/TWAIN-Zipper/1.jpg" alt="Twain Zipper Wallet" class="fc-image" onerror="this.src='https://froidindia.com/assets/images/products/TWAIN-Zipper/1.jpg'">
+			</div>
+		    
+			<div class="fc-content">
+			    <!-- Dynamic Star Rating -->
+			    <div class="fc-rating-row">
+				
+				<div class="fc-stars" style="--rating: 4.5;" aria-label="Rating is 4.9 out of 5"></div>
+				<span class="fc-review-count">4.5</span>
+			    </div>
+		    
+			    <!-- Titles -->
+			    <h3 class="fc-title">TWAIN — Travel Wallet (Beige) Zipper</h3>
+			    <p class="fc-subtitle">Carry 2 Insulin Pens, Zipper Closure, Beige Color, Keeps insulin cool 50+ hours*</p>
+		    
+			    <!-- Pricing -->
+			    <div class="fc-pricing-row">
+				<span class="fc-current-price">₹1,847</span>
+				<span class="fc-old-price">₹2,290</span>
+				<span class="fc-save-badge">Save ₹493</span>
+			    </div>
+		    
+			    <!-- Feature List -->
+			    <ul class="fc-features-list">
+				<li><span class="fc-check">✓</span> Inclusive of all taxes</li>
+				<li><span class="fc-check">✓</span> Free Shipping Across India 🇮🇳</li>
+				<li><span class="fc-check">✓</span> Official 1 Year Warranty</li>
+				<li><span class="fc-check">✓</span> No Hidden Charges</li>
+				<li><span class="fc-check">✓</span> Payment Secured by Razorpay</li>
+				
+			    </ul>
+		    
+			    <!-- CTA -->
+			    <button class="fc-btn">Buy Now</button>
+			</div>
+		    </div>
+
+
+
+		    <div class="froid-card">
+			<!-- Image & Top Badge -->
+			<div class="fc-image-container">
+			    <div class="fc-top-badge">Most Loved</div>
+			    <img style="background: white; object-fit: contain;" src="https://froidindia.com/assets/images/products/TWAIN-HooknLoop/1.jpg" alt="Twain Zipper Wallet" class="fc-image" onerror="this.src='https://froidindia.com/assets/images/products/TWAIN-HooknLoop/1.jpg'">
+			</div>
+		    
+			<div class="fc-content">
+			    <!-- Dynamic Star Rating -->
+			    <div class="fc-rating-row">
+				
+				<div class="fc-stars" style="--rating: 4.5;" aria-label="Rating is 4.9 out of 5"></div>
+				<span class="fc-review-count">4.5</span>
+			    </div>
+		    
+			    <!-- Titles -->
+			    <h3 class="fc-title">TWAIN — Travel Case (Black) Hook n Loop</h3>
+			    <p class="fc-subtitle">Carry 2 Insulin Pens, Hook & Loop Closure, Black Color, Keeps insulin cool 50+ hours*</p>
+		    
+			    <!-- Pricing -->
+			    <div class="fc-pricing-row">
+				<span class="fc-current-price">₹1,592</span>
+				<span class="fc-old-price">₹1,990</span>
+				<span class="fc-save-badge">Save ₹448</span>
+			    </div>
+		    
+			    <!-- Feature List -->
+			    <ul class="fc-features-list">
+				<li><span class="fc-check">✓</span> Inclusive of all taxes</li>
+				<li><span class="fc-check">✓</span> Free Shipping Across India 🇮🇳</li>
+				<li><span class="fc-check">✓</span> Official 1 Year Warranty</li>
+				<li><span class="fc-check">✓</span> No Hidden Charges</li>
+				<li><span class="fc-check">✓</span> Payment Secured by Razorpay</li>
+				
+			    </ul>
+		    
+			    <!-- CTA -->
+			    <button class="fc-btn">Buy Now</button>
+			</div>
+		    </div>
+
+
+
+		    <div class="froid-card">
+			<!-- Image & Top Badge -->
+			<div class="fc-image-container">
+			    <div class="fc-top-badge">Most Loved</div>
+			    <img style="background: white; object-fit: contain;" src="https://froidindia.com/assets/images/products/MEDIUM-Zipper/1.jpg" alt="Twain Zipper Wallet" class="fc-image" onerror="this.src='https://froidindia.com/assets/images/products/MEDIUM-Zipper/1.jpg'">
+			</div>
+		    
+			<div class="fc-content">
+			    <!-- Dynamic Star Rating -->
+			    <div class="fc-rating-row">
+				
+				<div class="fc-stars" style="--rating: 4.5;" aria-label="Rating is 4.9 out of 5"></div>
+				<span class="fc-review-count">4.5</span>
+			    </div>
+		    
+			    <!-- Titles -->
+			    <h3 class="fc-title">MEDIUM — Travel Wallet (Beige) Zipper</h3>
+			    <p class="fc-subtitle">Carry 2×5ml | 2×10ml | 4×5ml Insulin Vials, Zipepr Closure, Beige Color, Keeps insulin cool 50+ hours*</p>
+		    
+			    <!-- Pricing -->
+			    <div class="fc-pricing-row">
+				<span class="fc-current-price">₹1,762</span>
+				<span class="fc-old-price">₹2,190</span>
+				<span class="fc-save-badge">Save ₹478</span>
+			    </div>
+		    
+			    <!-- Feature List -->
+			    <ul class="fc-features-list">
+				<li><span class="fc-check">✓</span> Inclusive of all taxes</li>
+				<li><span class="fc-check">✓</span> Free Shipping Across India 🇮🇳</li>
+				<li><span class="fc-check">✓</span> Official 1 Year Warranty</li>
+				<li><span class="fc-check">✓</span> No Hidden Charges</li>
+				<li><span class="fc-check">✓</span> Payment Secured by Razorpay</li>
+				
+			    </ul>
+		    
+			    <!-- CTA -->
+			    <button class="fc-btn">Buy Now</button>
+			</div>
+		    </div>
+
+
+		    <div class="froid-card">
+			<!-- Image & Top Badge -->
+			<div class="fc-image-container">
+			    <div class="fc-top-badge">Most Loved</div>
+			    <img style="background: white; object-fit: contain;" src="https://froidindia.com/assets/images/products/SINGLE-HooknLoop/1.jpg" alt="Twain Zipper Wallet" class="fc-image" onerror="this.src='https://froidindia.com/assets/images/products/SINGLE-HooknLoop/1.jpg'">
+			</div>
+		    
+			<div class="fc-content">
+			    <!-- Dynamic Star Rating -->
+			    <div class="fc-rating-row">
+				
+				<div class="fc-stars" style="--rating: 4.5;" aria-label="Rating is 4.9 out of 5"></div>
+				<span class="fc-review-count">4.5</span>
+			    </div>
+		    
+			    <!-- Titles -->
+			    <h3 class="fc-title">SINGLE — Travel Case (Black) Hook n Loop</h3>
+			    <p class="fc-subtitle">Carry 1 Insulin Pen, Hook & Loop Closure, Black Color, Keeps insulin cool 50+ hours*</p>
+		    
+			    <!-- Pricing -->
+			    <div class="fc-pricing-row">
+				<span class="fc-current-price">₹1,337</span>
+				<span class="fc-old-price">₹1,690</span>
+				<span class="fc-save-badge">Save ₹403</span>
+			    </div>
+		    
+			    <!-- Feature List -->
+			    <ul class="fc-features-list">
+				<li><span class="fc-check">✓</span> Inclusive of all taxes</li>
+				<li><span class="fc-check">✓</span> Free Shipping Across India 🇮🇳</li>
+				<li><span class="fc-check">✓</span> Official 1 Year Warranty</li>
+				<li><span class="fc-check">✓</span> No Hidden Charges</li>
+				<li><span class="fc-check">✓</span> Payment Secured by Razorpay</li>
+				
+			    </ul>
+		    
+			    <!-- CTA -->
+			    <button class="fc-btn">Buy Now</button>
+			</div>
+		    </div>
+
+
+		    <div class="froid-card">
+			<!-- Image & Top Badge -->
+			<div class="fc-image-container">
+			    <div class="fc-top-badge">Most Loved</div>
+			    <img style="background: white; object-fit: contain;" src="https://froidindia.com/assets/images/products/SINGLE-Zipper/1.jpg" alt="Twain Zipper Wallet" class="fc-image" onerror="this.src='https://froidindia.com/assets/images/products/SINGLE-Zipper/1.jpg'">
+			</div>
+		    
+			<div class="fc-content">
+			    <!-- Dynamic Star Rating -->
+			    <div class="fc-rating-row">
+				
+				<div class="fc-stars" style="--rating: 4.5;" aria-label="Rating is 4.9 out of 5"></div>
+				<span class="fc-review-count">4.5</span>
+			    </div>
+		    
+			    <!-- Titles -->
+			    <h3 class="fc-title">SINGLE — Travel Wallet (Beige) Zipper</h3>
+			    <p class="fc-subtitle">Carry 1 Insulin Pen, Zipper Closure, Beige Color, Keeps insulin cool 50+ hours*</p>
+		    
+			    <!-- Pricing -->
+			    <div class="fc-pricing-row">
+				<span class="fc-current-price">₹1,592</span>
+				<span class="fc-old-price">₹1,990</span>
+				<span class="fc-save-badge">Save ₹448</span>
+			    </div>
+		    
+			    <!-- Feature List -->
+			    <ul class="fc-features-list">
+				<li><span class="fc-check">✓</span> Inclusive of all taxes</li>
+				<li><span class="fc-check">✓</span> Free Shipping Across India 🇮🇳</li>
+				<li><span class="fc-check">✓</span> Official 1 Year Warranty</li>
+				<li><span class="fc-check">✓</span> No Hidden Charges</li>
+				<li><span class="fc-check">✓</span> Payment Secured by Razorpay</li>
+				
+			    </ul>
+		    
+			    <!-- CTA -->
+			    <button class="fc-btn">Buy Now</button>
+			</div>
+		    </div>
+
+		    <div class="froid-card">
+			<!-- Image & Top Badge -->
+			<div class="fc-image-container">
+			    <div class="fc-top-badge">Most Loved</div>
+			    <img style="background: white; object-fit: contain;" src="https://froidindia.com/assets/images/products/MINI-Zipper/1.jpg" alt="Twain Zipper Wallet" class="fc-image" onerror="this.src='https://froidindia.com/assets/images/products/MINI-Zipper/1.jpg'">
+			</div>
+		    <div class="fc-content">
+			<!-- Dynamic Star Rating -->
+			<div class="fc-rating-row">
+			    
+			    <div class="fc-stars" style="--rating: 4.5;" aria-label="Rating is 4.9 out of 5"></div>
+			    <span class="fc-review-count">4.5</span>
+			</div>
+		
+			<!-- Titles -->
+			<h3 class="fc-title">MINI — Travel Wallet (Beige) Zipper</h3>
+			<p class="fc-subtitle">Carry 1×5ml | 1×10ml Insulin Vials, Zipepr Closure, Beige Color, Keeps insulin cool 50+ hours*</p>
+		
+			<!-- Pricing -->
+			<div class="fc-pricing-row">
+			    <span class="fc-current-price">₹1,337</span>
+			    <span class="fc-old-price">₹1,690</span>
+			    <span class="fc-save-badge">Save ₹403</span>
+			</div>
+		
+			<!-- Feature List -->
+			<ul class="fc-features-list">
+			    <li><span class="fc-check">✓</span> Inclusive of all taxes</li>
+			    <li><span class="fc-check">✓</span> Free Shipping Across India 🇮🇳</li>
+			    <li><span class="fc-check">✓</span> Official 1 Year Warranty</li>
+			    <li><span class="fc-check">✓</span> No Hidden Charges</li>
+			    <li><span class="fc-check">✓</span> Payment Secured by Razorpay</li>
+			    
+			</ul>
+		
+			<!-- CTA -->
+			<button class="fc-btn">Buy Now</button>
+		    </div>
+		</div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Redeem -->
+    <section class="steps">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Claim Your Discount in 3 Steps</h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card reveal">
+                    <div class="step-number">1</div>
+                    <h3>Pick Your Wallet</h3>
+                    <p style="color: var(--text-muted);">Choose the FROiD model that fits your insulin pens or vials.</p>
+                </div>
+                <div class="step-card reveal" style="transition-delay: 0.2s">
+                    <div class="step-number">2</div>
+                    <h3>Auto-Discount</h3>
+                    <p style="color: var(--text-muted);">The exclusive 5% community discount is applied automatically.</p>
+                </div>
+                <div class="step-card reveal" style="transition-delay: 0.4s">
+                    <div class="step-number">3</div>
+                    <h3>Tap Water Activation</h3>
+                    <p style="color: var(--text-muted);">Soak for 10 mins upon arrival for 50+ hours of safe cooling*.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>What Fellow T1D Warriors Are Saying</h2>
+            </div>
+            
+            <div class="reviews-slider reveal">
+                <div class="review-card">
+                    <div class="stars-review">★★★★★ <div class="badge" style="margin-bottom: 0;">verified purchase</div></div>
+                    <p class="review-text">"I travel for work every week and never worry about my insulin anymore. It just works, every single time."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">A</div>
+                        <div class="reviewer-info">
+                            <h4>Ananya, 27</h4>
+                            <p>Living with T1D · Mumbai</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="stars-review">★★★★★ <div class="badge" style="margin-bottom: 0;">verified purchase</div></div>
+                    <p class="review-text">"No more ice packs melting in my bag. Soak it, pack it, and I'm out the door in ten minutes."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">R</div>
+                        <div class="reviewer-info">
+                            <h4>Rohan, 34</h4>
+                            <p>Living with T1D · Bengaluru</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="stars-review">★★★★★ <div class="badge" style="margin-bottom: 0;">verified purchase</div></div>
+                    <p class="review-text">"As a parent of a T1D child, this gives me real peace of mind — especially during our summer trips."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">P</div>
+                        <div class="reviewer-info">
+                            <h4>Priya, 41 </h4>
+                            <p>Caregiver · Delhi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Questions From The Community</h2>
+            </div>
+            
+            <div class="faq-container reveal">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is this discount only for Sarika's followers?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes — it was created specifically for her community and offers an extra 5% off on top of the current Official Site price.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Does FROiD really need no ice or electricity?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Correct. Soak the inner pouch in ordinary tap water for 10 minutes and it maintains 18–30°C for 50+ hours — no ice, batteries, or power needed.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is it safe for insulin pens?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. FROiD is tested and approved by India's National Test House (NTH) and is backed by a granted patent.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What if the wallet arrives damaged?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Every FROiD wallet purchased from this official site includes a 1-year warranty against manufacturing defects. Just reach out to support!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta reveal">
+        <div class="container cta-content">
+            <h2>Protect Your Insulin.</h2>
+            <p>Join thousands of insulin users who trust FROiD every day.</p>
+            <a href="#products" class="btn btn-white">Shop Community Collection</a>
+            <div class="cta-trust">
+                <span>🔒 Razorpay Secure Checkout</span>
+                <span>✓ Official FROiD Website</span>
+                <span>🇮🇳 Proudly Made in India</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo"> FROiD
+	    </div>
+            <div class="footer-links">
+                <a href="https://froidindia.com/">Main Site</a>
+                <a href="https://wa.me/+919313829678">WhatsApp Support</a>
+                <a href="mailto:froidindia@gmail.com">Email Us</a>
+            </div>
+            <p class="copyright">2026 © FROiD Cooling Products. All rights reserved. <br> Community Discounted offer created for Sarika Sharma by Team FROiD. <br>Please Note: * Cooling duration may vary with environmental conditions.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-cta" id="mobileCta">
+        <div class="m-cta-text">
+            <span>5% Off Applied</span><br>
+            Community Discount.
+        </div>
+        <a href="#products" class="btn btn-pink fc-discount-badge" style="padding: 10px 20px; font-size: 0.75rem;">Shop Now</a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Sticky Nav Blur Effect
+            const navbar = document.getElementById('navbar');
+            const mobileCta = document.getElementById('mobileCta');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                
+                // Show Mobile CTA after scrolling past hero
+                if (window.scrollY > 500) {
+                    mobileCta.classList.add('visible');
+                } else {
+                    mobileCta.classList.remove('visible');
+                }
+            });
+
+            // 2. Scroll Reveal Animations (Intersection Observer)
+            const revealOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, revealOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => {
+                revealObserver.observe(el);
+            });
+
+            // 3. Mouse Parallax Effect (Hero Section)
+            // Only active on desktop to save mobile battery
+            if (window.innerWidth > 768) {
+                document.addEventListener('mousemove', (e) => {
+                    const x = (e.clientX / window.innerWidth - 0.5) * 2;
+                    const y = (e.clientY / window.innerHeight - 0.5) * 2;
+                    
+                    document.querySelectorAll('.parallax').forEach(el => {
+                        const speed = el.getAttribute('data-speed');
+                        el.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+                    });
+                });
+            }
+
+            // 4. FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all
+                    faqItems.forEach(faq => faq.classList.remove('active'));
+                    
+                    // Open clicked if it wasn't already active
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>
