@@ -234,17 +234,48 @@ src="https://www.facebook.com/tr?id=3196428797217143&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
 
 
-<script>
-  window.addEventListener('load', function () {
-    const button = document.querySelector('.your-razorpay-button');
 
-    if (button) {
-      button.addEventListener('click', function () {
-        fbq('track', 'InitiateCheckout', {currency: "INR", value: 00, contents: "Razorpay Checkout Initiated..."});
-      });
-    }
-  });
-</script>
+
+<style>
+              .btn-buy-glow {
+                margin:  0 auto;
+                width: 95%;
+                display: block;
+                background-color: #ffd814;
+                color: #000000;
+                font-family: inherit;
+                font-size: 15px;
+                font-weight: 600;
+                padding: 12px 28px;
+                border: 2px solid #ffd814;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .btn-buy-glow:hover {
+              transform: translateY(-2px);
+              background: #fccf54;
+              transition: all ease-in-out;
+            }
+
+            .btn-buy-glow:active {
+              transform: translateY(1px);
+              box-shadow: 0 5px 10px rgba(255, 75, 43, 0.4);
+            }
+            </style>
+            <script>
+              function handleRazorpayClick(url, price, sku) {
+                // Run your custom code first
+                //console.log('Razorpay button clicked');
+
+                // Open Razorpay in a new tab
+                window.open(url, '_self');
+
+                fbq('track', 'InitiateCheckout', {currency: "INR", value: price, contents: "Razorpay Checkout Initiated for : "+ sku});
+              }
+            </script>
+
     
 </head>
 <body>
@@ -603,18 +634,16 @@ src="https://www.facebook.com/tr?id=3196428797217143&ev=PageView&noscript=1"
             <p class="pprice" itemprop="price" content="1692">&#8377;1,692</p>
             <meta itemprop="priceCurrency" content="INR"/><meta itemprop="availability" content="https://schema.org/InStock"/>
             <p class="ptax">Inclusive of all taxes & Free Shipping Across India.</p> 
-            <div class="wbuys">
-              <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_TIo5X0dMReRXEs/view" data-text="Buy Now" data-color="#0A2463" data-size="large">
-                <script>
-                  (function(){
-                    var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
-                    if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
-                    s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['__rzp__'];
-                    rzp && rzp.init && rzp.init()}})();
-                </script>
-              </div>
-                  
+
+            <div style="margin: 15px 0;">
+              <button class="btn-buy-glow" onclick="handleRazorpayClick(
+                'https://pages.razorpay.com/pl_TIo5X0dMReRXEs/view',
+              '1692', 'FROiD Twain Hook n Loop')">
+                Order Now
+              </button>
+              <div style="font-size: 0.78em; text-align: center; margin: 0 auto; font-weight: 500;">Shop Directly from FROiD Official Store.</div>
             </div>
+              
             <div class="pbuys"> 
               <a href="https://amzn.in/d/2HvmrZ6" class="pby pamz" rel="noopener" target="_blank" itemprop="url"><img src="./assets/logos/amazon.png" alt=""> Buy Now
               </a>
@@ -652,18 +681,16 @@ src="https://www.facebook.com/tr?id=3196428797217143&ev=PageView&noscript=1"
             <p class="pprice" itemprop="price" content="1437">&#8377;1,437</p>
             <meta itemprop="priceCurrency" content="INR"/><meta itemprop="availability" content="https://schema.org/InStock"/>
             <p class="ptax">Inclusive of all taxes & Free Shipping Across India.</p>
-            <div class="wbuys">
-              <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_TIo6PxZXVQy3Hj/view" data-text="Buy Now" data-color="#0A2463" data-size="large">
-                <script>
-                  (function(){
-                    var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
-                    if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
-                    s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['__rzp__'];
-                    rzp && rzp.init && rzp.init()}})();
-                </script>
-              </div>
-                  
+
+            <div style="margin: 15px 0;">
+              <button class="btn-buy-glow" onclick="handleRazorpayClick(
+                'https://pages.razorpay.com/pl_TIo6PxZXVQy3Hj/view',
+              '1437', 'FROiD Single Hook n Loop')">
+                Order Now
+              </button>
+              <div style="font-size: 0.78em; text-align: center; margin: 0 auto; font-weight: 500;">Shop Directly from FROiD Official Store.</div>
             </div>
+            
             <div class="pbuys">
               <a href="https://amzn.in/d/hONjOTL" class="pby pamz" rel="noopener" target="_blank"><img src="./assets/logos/amazon.png" alt=""> Buy Now</a>
               <a href="https://www.jiomart.com/p/groceries/froid-insulin-cooler-travel-case-tap-water-activated-for-diabetic-pens-no-ice-packs-needed-keeps-cool-50-hrs-reusable-travel-pouch-fits-1-pens-black-made-in-india/613524865" class="pby pjio" rel="noopener" target="_blank"><img src="./assets/logos/jiomart.png" alt="">Buy Now</a>
@@ -699,16 +726,16 @@ src="https://www.facebook.com/tr?id=3196428797217143&ev=PageView&noscript=1"
             <p class="pprice" itemprop="price" content="1947">&#8377;1,947</p>
             <meta itemprop="priceCurrency" content="INR"/><meta itemprop="availability" content="https://schema.org/InStock"/>
             <p class="ptax">Inclusive of all taxes & Free Shipping Across India.</p>
-            <div class="wbuys">
-              <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_TIo27TalDlSTW8/view" data-text="Buy Now" data-color="#0A2463" data-size="large">
-                <script>
-                  (function(){
-                    var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
-                    if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
-                    s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['__rzp__'];
-                    rzp && rzp.init && rzp.init()}})();
-                </script>
-              </div>
+
+             <div style="margin: 15px 0;">
+              <button class="btn-buy-glow" onclick="handleRazorpayClick(
+                'https://pages.razorpay.com/pl_TIo27TalDlSTW8/view',
+              '1947', 'FROiD Twain Zipper')">
+                Order Now
+              </button>
+              <div style="font-size: 0.78em; text-align: center; margin: 0 auto; font-weight: 500;">Shop Directly from FROiD Official Store.</div>
+            </div>
+            
                   
             </div>
             <div class="pbuys">
@@ -743,16 +770,16 @@ src="https://www.facebook.com/tr?id=3196428797217143&ev=PageView&noscript=1"
             <p class="pprice" itemprop="price" content="1692">&#8377;1,692</p>
             <meta itemprop="priceCurrency" content="INR"/><meta itemprop="availability" content="https://schema.org/InStock"/>
             <p class="ptax">Inclusive of all taxes & Free Shipping Across India.</p>
-            <div class="wbuys">
-              <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_TIo9zZ6WSdPZE2/view" data-text="Buy Now" data-color="#0A2463" data-size="large">
-                <script>
-                  (function(){
-                    var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
-                    if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
-                    s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['__rzp__'];
-                    rzp && rzp.init && rzp.init()}})();
-                </script>
-              </div>
+
+            <div style="margin: 15px 0;">
+              <button class="btn-buy-glow" onclick="handleRazorpayClick(
+                'https://pages.razorpay.com/pl_TIo9zZ6WSdPZE2/view',
+              '1692', 'FROiD Single Zipper')">
+                Order Now
+              </button>
+              <div style="font-size: 0.78em; text-align: center; margin: 0 auto; font-weight: 500;">Shop Directly from FROiD Official Store.</div>
+            </div>
+              
                   
             </div>
             <div class="pbuys">
@@ -787,16 +814,16 @@ src="https://www.facebook.com/tr?id=3196428797217143&ev=PageView&noscript=1"
             <p class="pprice" itemprop="price" content="1437">&#8377;1,437</p>
             <meta itemprop="priceCurrency" content="INR"/><meta itemprop="availability" content="https://schema.org/InStock"/>
             <p class="ptax">Inclusive of all taxes & Free Shipping Across India.</p>
-            <div class="wbuys">
-              <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_TIoDi8KGpvDm6O/view" data-text="Buy Now" data-color="#0A2463" data-size="large">
-                <script>
-                  (function(){
-                    var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
-                    if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
-                    s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['__rzp__'];
-                    rzp && rzp.init && rzp.init()}})();
-                </script>
-              </div>
+
+            <div style="margin: 15px 0;">
+              <button class="btn-buy-glow" onclick="handleRazorpayClick(
+                'https://pages.razorpay.com/pl_TIoDi8KGpvDm6O/view',
+              '1437', 'FROiD Mini Zipper')">
+                Order Now
+              </button>
+              <div style="font-size: 0.78em; text-align: center; margin: 0 auto; font-weight: 500;">Shop Directly from FROiD Official Store.</div>
+            </div>
+              
                   
             </div>
             <div class="pbuys">
@@ -834,15 +861,14 @@ src="https://www.facebook.com/tr?id=3196428797217143&ev=PageView&noscript=1"
             <p class="pprice" itemprop="price" content="1862">&#8377;1,862</p>
             <meta itemprop="priceCurrency" content="INR"/><meta itemprop="availability" content="https://schema.org/InStock"/>
             <p class="ptax">Inclusive of all taxes & Free Shipping Across India.</p>
-            <div class="wbuys">
-             <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_TIoD7COxV1GjVh/view" data-text="Buy Now" data-color="#0A2463" data-size="large">
-              <script>
-                (function(){
-                  var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
-                  if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
-                  s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['__rzp__'];
-                  rzp && rzp.init && rzp.init()}})();
-              </script>
+
+            <div style="margin: 15px 0;">
+              <button class="btn-buy-glow" onclick="handleRazorpayClick(
+                'https://pages.razorpay.com/pl_TIoD7COxV1GjVh/view',
+              '1862', 'FROiD Medium Zipper')">
+                Order Now
+              </button>
+              <div style="font-size: 0.78em; text-align: center; margin: 0 auto; font-weight: 500;">Shop Directly from FROiD Official Store.</div>
             </div>
                 
                   
