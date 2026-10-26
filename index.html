@@ -232,6 +232,19 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=3196428797217143&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+
+
+<script>
+  window.addEventListener('load', function () {
+    const button = document.querySelector('.your-razorpay-button');
+
+    if (button) {
+      button.addEventListener('click', function () {
+        fbq('track', 'InitiateCheckout', {currency: "INR", value: 00, contents: "Razorpay Checkout Initiated..."});
+      });
+    }
+  });
+</script>
     
 </head>
 <body>
@@ -598,7 +611,6 @@ src="https://www.facebook.com/tr?id=3196428797217143&ev=PageView&noscript=1"
                     if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
                     s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['__rzp__'];
                     rzp && rzp.init && rzp.init()}})();
-                    fbq('track', 'InitiateCheckout', {currency: "IND", value: 1692, contents: "Initiate Checkout for FROID Twain Hook n Loop"});
                 </script>
               </div>
                   
