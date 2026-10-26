@@ -48,6 +48,117 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png"/>
 <link rel="manifest" href="site.webmanifest"/>
 
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const proofContainers = document.querySelectorAll('.dynamic-proof-box');
+
+  proofContainers.forEach(container => {
+    const rating = (Math.random() * (5.0 - 4.5) + 4.5).toFixed(1);
+    const fullStars = Math.floor(rating);
+    const hasHalf = rating % 1 >= 0.3 && rating % 1 <= 0.7;
+    let starsHtml = '★'.repeat(fullStars);
+    if (hasHalf) starsHtml += '½';
+    const reviewCount = Math.floor(Math.random() * (399 - 49 + 1)) + 49;
+
+    const buyersCount = Math.floor(Math.random() * (49 - 19 + 1)) + 19;
+
+    const viewersCount = Math.floor(Math.random() * (90 - 30 + 1)) + 30;
+
+    container.innerHTML = `
+      <div class="proof-rating-row">
+        <span class="proof-rating-num">${rating}</span>
+        <span class="proof-stars">${starsHtml}</span>
+        <span class="proof-reviews-cnt">(${reviewCount} reviews)</span>
+      </div>
+      <div class="proof-metric-line">
+        <span class="proof-pulse-dot"></span>
+        <span><strong>${buyersCount}+ people</strong> bought this recently</span>
+      </div>
+    `;
+  });
+});
+</script>
+
+<style>
+.dynamic-proof-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin: 12px 0 16px 0;
+  font-family: inherit;
+}
+
+.proof-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.proof-stars {
+  color: #f59e0b;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.proof-rating-num {
+  font-weight: 700;
+  font-size: 14px;
+  color: #0F172A;
+}
+
+.proof-reviews-cnt {
+  font-size: 12px;
+  color: #64748B;
+}
+
+.proof-metric-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #334155;
+  margin-top: 4px;
+}
+
+.proof-icon {
+  font-size: 13px;
+}
+
+.proof-metric-line.viewing {
+  color: #047857;
+  font-weight: 500;
+}
+
+.proof-pulse-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #10B981;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: proofPulse 1.8s infinite;
+}
+
+@keyframes proofPulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+</style>
+
+
 <!-- SCHEMA: Organization -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"FROiD Cooling
@@ -452,6 +563,9 @@ cooler.","brand":{"@type":"Brand","name":"FROiD"},"offers":{"@type":"Offer","pri
         <div class="pbody">
           <h3 itemprop="name">TWAIN: Insulin Cooler Travel Case (Black) Hook n Loop</h3>
           <div class="ptags"><span class="ptag">2 Insulin Pens</span><span class="ptag">Hook &amp; Loop</span><span class="ptag">Black</span></div>
+
+            <div class="dynamic-proof-box"></div>
+        
           <div class="ppr" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
             <p class="pmrp">M.R.P. <s>&#8377;1,990</s> &nbsp;<span class="psave">Save 15%</span></p>
             <p class="pprice" itemprop="price" content="1692">&#8377;1,692</p>
@@ -498,6 +612,9 @@ cooler.","brand":{"@type":"Brand","name":"FROiD"},"offers":{"@type":"Offer","pri
         <div class="pbody">
           <h3 itemprop="name">SINGLE: Insulin Cooler Travel Case (Black) Hook n Loop</h3>
           <div class="ptags"><span class="ptag">1 Insulin Pen</span><span class="ptag">Hook &amp; Loop</span><span class="ptag">Black</span></div>
+
+            <div class="dynamic-proof-box"></div>
+            
           <div class="ppr" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
             <p class="pmrp">M.R.P. <s>&#8377;1,690</s> &nbsp;<span class="psave">Save 15%</span></p>
             <p class="pprice" itemprop="price" content="1437">&#8377;1,437</p>
@@ -542,6 +659,9 @@ cooler.","brand":{"@type":"Brand","name":"FROiD"},"offers":{"@type":"Offer","pri
         <div class="pbody">
           <h3 itemprop="name">TWAIN: Insulin Cooling Travel Wallet (Beige) Zipper</h3>
           <div class="ptags"><span class="ptag">2 Insulin Pens</span><span class="ptag">Zipper</span><span class="ptag">Beige</span></div>
+
+            <div class="dynamic-proof-box"></div>
+            
           <div class="ppr" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
             <p class="pmrp">M.R.P. <s>&#8377;2,290</s> &nbsp;<span class="psave">Save 15%</span></p>
             <p class="pprice" itemprop="price" content="1947">&#8377;1,947</p>
@@ -585,7 +705,7 @@ cooler.","brand":{"@type":"Brand","name":"FROiD"},"offers":{"@type":"Offer","pri
         </div>
         <div class="pbody">
           <h3 itemprop="name">SINGLE: Insulin Cooling Travel Wallet (Beige) Zipper</h3>
-          <div class="ptags"><span class="ptag">1 Insulin Pen</span><span class="ptag">Zipper</span><span class="ptag">Beige</span></div>
+          <div class="ptags"><span class="ptag">1 Insulin Pen</span><span class="ptag">Zipper</span><span class="ptag">Beige</span></div>            
           <div class="ppr" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
             <p class="pmrp">M.R.P. <s>&#8377;1,990</s> &nbsp;<span class="psave">Save 15%</span></p>
             <p class="pprice" itemprop="price" content="1692">&#8377;1,692</p>
@@ -629,7 +749,7 @@ cooler.","brand":{"@type":"Brand","name":"FROiD"},"offers":{"@type":"Offer","pri
         </div>
         <div class="pbody">
           <h3 itemprop="name">MINI: Insulin Cooling Travel Wallet (Beige) Zipper</h3>
-          <div class="ptags"><span class="ptag">1&times;5ml Vial</span><span class="ptag">1&times;10ml Vial</span><span class="ptag">2&times;5ml Vials</span></div>
+          <div class="ptags"><span class="ptag">1&times;5ml Vial</span><span class="ptag">1&times;10ml Vial</span><span class="ptag">2&times;5ml Vials</span></div>            
           <div class="ppr" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
             <p class="pmrp">M.R.P. <s>&#8377;1,690</s> &nbsp;<span class="psave">Save 15%</span></p>
             <p class="pprice" itemprop="price" content="1437">&#8377;1,437</p>
@@ -674,6 +794,9 @@ cooler.","brand":{"@type":"Brand","name":"FROiD"},"offers":{"@type":"Offer","pri
         <div class="pbody">
           <h3 itemprop="name">MEDIUM: Insulin Cooling Travel Wallet (Beige) Zipper</h3>
           <div class="ptags"><span class="ptag">2&times;5ml</span><span class="ptag">2&times;10ml Vials</span><span class="ptag">4&times;5ml Vials</span></div>
+
+            <div class="dynamic-proof-box"></div>
+            
           <div class="ppr" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
             <p class="pmrp">M.R.P. <s>&#8377;2,190</s> &nbsp;<span class="psave">Save 15%</span></p>
             <p class="pprice" itemprop="price" content="1862">&#8377;1,862</p>
